@@ -8,7 +8,7 @@ namespace ChargeReady.EditorTools
     // Creates the config asset and the single scene, so the cloud build needs nothing made by hand.
     public static class BuildSetup
     {
-        const string ConfigPath = "Assets/Resources/EconomyConfig.asset", ScenePath = "Assets/Scenes/Main.unity";
+        const string ConfigPath = "Assets/Resources/EconomyConfig.asset", MaterialPath = "Assets/Resources/Lit.mat", ScenePath = "Assets/Scenes/Main.unity";
 
         [MenuItem("Charge Ready/Build Scene and Config")]
         public static void PreExport()
@@ -18,6 +18,8 @@ namespace ChargeReady.EditorTools
                 if (!AssetDatabase.IsValidFolder("Assets/Resources")) AssetDatabase.CreateFolder("Assets", "Resources");
                 AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<EconomyConfig>(), ConfigPath);
             }
+            if (AssetDatabase.LoadAssetAtPath<Material>(MaterialPath) == null)
+                AssetDatabase.CreateAsset(new Material(Shader.Find("Standard")), MaterialPath);
             if (!AssetDatabase.IsValidFolder("Assets/Scenes")) AssetDatabase.CreateFolder("Assets", "Scenes");
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             new GameObject("Game").AddComponent<Game>();
