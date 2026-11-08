@@ -25,6 +25,11 @@ namespace ChargeReady.EditorTools
             EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.Portrait;
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.chargeready.prototype");
+            PlayerSettings.productName = "Charge Ready";
+            PlayerSettings.companyName = "Charge Ready";
+            // Many new phones run only 64-bit apps, which needs IL2CPP and an ARM64 build.
+            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
+            PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64 | AndroidArchitecture.ARMv7;
             AssetDatabase.SaveAssets();
         }
     }
