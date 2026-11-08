@@ -1,0 +1,24 @@
+name: Android APK
+on:
+  push:
+    branches: [main]
+    paths: ['android/**', '.github/workflows/android.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: tar xzf android/project.tar.gz -C android
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: gradle/actions/setup-gradle@v4
+        with: { gradle-version: '8.7' }
+      - run: gradle -p android/project assembleDebug
+      - run: cp android/project/app/build/outputs/apk/debug/app-debug.apk ChargeReady.apk
+      - uses: actions/upload-artifact@v4
+        with: { name: ChargeReady-apk, path: ChargeReady.apk }
+      - run: gh release create "apk-${{ github.run_number }}" ChargeReady.apk --title "Charge Ready APK ${{ github.run_number }}" --notes "Built from ${{ github.sha }}"
+        env: { GH_TOKEN: '${{ github.token }}' }
