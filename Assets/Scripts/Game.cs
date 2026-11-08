@@ -41,12 +41,16 @@ namespace ChargeReady
             Application.targetFrameRate = 60;
             Screen.orientation = ScreenOrientation.Portrait;
             cfg = Resources.Load<EconomyConfig>("EconomyConfig");
+            baseMat = Resources.Load<Material>("Lit");
             if (cfg == null) cfg = ScriptableObject.CreateInstance<EconomyConfig>();
             Load();
             BuildWorld();
         }
 
         // Plain boxes and capsules are the whole art for now; colliders are removed because the game moves things itself.
+        // Every shape copies this material, so its shader ships with the build instead of being stripped.
+        static Material baseMat;
+
         static Transform Shape(PrimitiveType type, Vector3 pos, Vector3 size, Color color, Transform parent = null)
         {
             var go = GameObject.CreatePrimitive(type);
@@ -54,7 +58,9 @@ namespace ChargeReady
             go.transform.SetParent(parent, false);
             go.transform.localPosition = pos;
             go.transform.localScale = size;
-            go.GetComponent<Renderer>().material.color = color;
+            var r = go.GetComponent<Renderer>();
+            if (baseMat != null) r.sharedMaterial = new Material(baseMat);
+            r.material.color = color;
             return go.transform;
         }
 
