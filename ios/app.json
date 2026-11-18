@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Charge Ready",
+    "slug": "charge-ready",
+    "version": "1.15.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#bfe8ff",
+    "splash": {
+      "backgroundColor": "#bfe8ff"
+    },
+    "assetBundlePatterns": [
+      "assets/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.chargeready.app",
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.chargeready.app"
+    }
+  }
+}
