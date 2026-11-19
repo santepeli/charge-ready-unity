@@ -1,0 +1,7171 @@
+{
+  "novice": {
+    "stat": {
+      "car1": {
+        "median": 26,
+        "p90": 28
+      },
+      "bay2": {
+        "median": 62,
+        "p90": 89
+      },
+      "bay3": {
+        "median": 137,
+        "p90": 137
+      },
+      "worker": {
+        "median": 180,
+        "p90": 199
+      },
+      "office": {
+        "median": 201,
+        "p90": 257
+      },
+      "accounting": {
+        "median": 228,
+        "p90": 303
+      },
+      "bay4": {
+        "median": 309,
+        "p90": 347
+      },
+      "complete": {
+        "median": 613,
+        "p90": 718
+      },
+      "coffee": {
+        "median": 624,
+        "p90": 733
+      },
+      "stage3": {
+        "median": 720,
+        "p90": 910
+      },
+      "depot": {
+        "median": 727,
+        "p90": 916
+      },
+      "stage4": {
+        "median": null,
+        "p90": null
+      },
+      "wash": {
+        "median": null,
+        "p90": null
+      },
+      "rating": 4.5,
+      "missions": 3,
+      "vanPerMin": 53,
+      "missedShare": 0.3,
+      "fines": 0,
+      "jams": 10,
+      "cups": 34
+    },
+    "runs": [
+      {
+        "seed": 1,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "bay2",
+            57
+          ],
+          [
+            "selfplug",
+            68
+          ],
+          [
+            "serve",
+            76
+          ],
+          [
+            "idlefee",
+            76
+          ],
+          [
+            "combo3",
+            78
+          ],
+          [
+            "mission1",
+            100
+          ],
+          [
+            "vipintro",
+            113
+          ],
+          [
+            "jam",
+            126
+          ],
+          [
+            "policehold",
+            137
+          ],
+          [
+            "bay3",
+            137
+          ],
+          [
+            "viptip",
+            160
+          ],
+          [
+            "goal_town_0",
+            168
+          ],
+          [
+            "mission2",
+            195
+          ],
+          [
+            "worker",
+            199
+          ],
+          [
+            "policewarning",
+            202
+          ],
+          [
+            "rival1",
+            254
+          ],
+          [
+            "office",
+            257
+          ],
+          [
+            "workerplug",
+            263
+          ],
+          [
+            "goal_town_1",
+            272
+          ],
+          [
+            "slack",
+            283
+          ],
+          [
+            "wake",
+            287
+          ],
+          [
+            "viptrail",
+            296
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "report_extra",
+            303
+          ],
+          [
+            "accounting",
+            303
+          ],
+          [
+            "mission3",
+            315
+          ],
+          [
+            "goal_town_5",
+            341
+          ],
+          [
+            "bay4",
+            347
+          ],
+          [
+            "capacity1",
+            353
+          ],
+          [
+            "tariff1",
+            358
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "speed1",
+            369
+          ],
+          [
+            "capacity2",
+            390
+          ],
+          [
+            "tariff2",
+            393
+          ],
+          [
+            "speed2",
+            395
+          ],
+          [
+            "boost_extra",
+            395
+          ],
+          [
+            "capacity3",
+            398
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "tariff3",
+            445
+          ],
+          [
+            "speed3",
+            453
+          ],
+          [
+            "capacity4",
+            471
+          ],
+          [
+            "tariff4",
+            476
+          ],
+          [
+            "speed4",
+            481
+          ],
+          [
+            "rival2",
+            505
+          ],
+          [
+            "boost_extra",
+            505
+          ],
+          [
+            "capacity5",
+            532
+          ],
+          [
+            "tariff5",
+            535
+          ],
+          [
+            "speed5",
+            613
+          ],
+          [
+            "complete",
+            613
+          ],
+          [
+            "side",
+            619
+          ],
+          [
+            "side",
+            620
+          ],
+          [
+            "coffee",
+            624
+          ],
+          [
+            "goal_town_2",
+            625
+          ],
+          [
+            "espresso1",
+            626
+          ],
+          [
+            "coffeePrice1",
+            628
+          ],
+          [
+            "cup1",
+            630
+          ],
+          [
+            "espresso2",
+            638
+          ],
+          [
+            "coffeePrice2",
+            661
+          ],
+          [
+            "barista1",
+            664
+          ],
+          [
+            "fine1",
+            679
+          ],
+          [
+            "fine",
+            679
+          ],
+          [
+            "espresso3",
+            682
+          ],
+          [
+            "convoy",
+            686
+          ],
+          [
+            "coffeePrice3",
+            697
+          ],
+          [
+            "stage3",
+            697
+          ],
+          [
+            "depot",
+            702
+          ],
+          [
+            "dispatch",
+            705
+          ],
+          [
+            "vanSpeed1",
+            707
+          ],
+          [
+            "vanBattery1",
+            721
+          ],
+          [
+            "rescue",
+            722
+          ],
+          [
+            "callmissed",
+            740
+          ],
+          [
+            "vanSpeed2",
+            741
+          ],
+          [
+            "goal_town_3",
+            781
+          ],
+          [
+            "rival3",
+            790
+          ],
+          [
+            "vans1",
+            794
+          ],
+          [
+            "vanBattery2",
+            819
+          ],
+          [
+            "vanSpeed3",
+            837
+          ],
+          [
+            "boost_extra",
+            873
+          ],
+          [
+            "blackout",
+            876
+          ],
+          [
+            "vans2",
+            878
+          ],
+          [
+            "vanBattery3",
+            883
+          ]
+        ],
+        "doneAt": 613,
+        "served": 119,
+        "earned": 6531,
+        "rating": 4.3,
+        "ratingEnd": 4.7,
+        "missions": 3,
+        "playSec": 913,
+        "mobile": {
+          "cash": 343,
+          "earned": 343,
+          "jobs": 14,
+          "missed": 6,
+          "rescued": 0
+        },
+        "jams": 7,
+        "fines": 1,
+        "lost": 15,
+        "cups": 38,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "bay2": 57,
+          "selfplug": 68,
+          "serve": 76,
+          "idlefee": 76,
+          "combo3": 78,
+          "mission1": 100,
+          "vipintro": 113,
+          "jam": 126,
+          "policehold": 137,
+          "bay3": 137,
+          "viptip": 160,
+          "goal_town_0": 168,
+          "mission2": 195,
+          "worker": 199,
+          "policewarning": 202,
+          "rival1": 254,
+          "office": 257,
+          "workerplug": 263,
+          "goal_town_1": 272,
+          "slack": 283,
+          "wake": 287,
+          "viptrail": 296,
+          "convoy": 686,
+          "report_extra": 303,
+          "accounting": 303,
+          "mission3": 315,
+          "goal_town_5": 341,
+          "bay4": 347,
+          "capacity1": 353,
+          "tariff1": 358,
+          "blackout": 876,
+          "speed1": 369,
+          "capacity2": 390,
+          "tariff2": 393,
+          "speed2": 395,
+          "boost_extra": 873,
+          "capacity3": 398,
+          "storm": 420,
+          "tariff3": 445,
+          "speed3": 453,
+          "capacity4": 471,
+          "tariff4": 476,
+          "speed4": 481,
+          "rival2": 505,
+          "capacity5": 532,
+          "tariff5": 535,
+          "speed5": 613,
+          "complete": 613,
+          "side": 620,
+          "coffee": 624,
+          "goal_town_2": 625,
+          "espresso1": 626,
+          "coffeePrice1": 628,
+          "cup1": 630,
+          "espresso2": 638,
+          "coffeePrice2": 661,
+          "barista1": 664,
+          "fine1": 679,
+          "fine": 679,
+          "espresso3": 682,
+          "coffeePrice3": 697,
+          "stage3": 697,
+          "depot": 702,
+          "dispatch": 705,
+          "vanSpeed1": 707,
+          "vanBattery1": 721,
+          "rescue": 722,
+          "callmissed": 740,
+          "vanSpeed2": 741,
+          "goal_town_3": 781,
+          "rival3": 790,
+          "vans1": 794,
+          "vanBattery2": 819,
+          "vanSpeed3": 837,
+          "vans2": 878,
+          "vanBattery3": 883
+        },
+        "errors": []
+      },
+      {
+        "seed": 2,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            9
+          ],
+          [
+            "hungry",
+            25
+          ],
+          [
+            "car1",
+            28
+          ],
+          [
+            "bay2",
+            62
+          ],
+          [
+            "serve",
+            76
+          ],
+          [
+            "idlefee",
+            76
+          ],
+          [
+            "combo3",
+            79
+          ],
+          [
+            "selfplug",
+            91
+          ],
+          [
+            "mission1",
+            107
+          ],
+          [
+            "bay3",
+            116
+          ],
+          [
+            "vipintro",
+            119
+          ],
+          [
+            "jam",
+            132
+          ],
+          [
+            "mission2",
+            147
+          ],
+          [
+            "goal_town_0",
+            166
+          ],
+          [
+            "policewarning",
+            168
+          ],
+          [
+            "worker",
+            171
+          ],
+          [
+            "rival1",
+            180
+          ],
+          [
+            "workerplug",
+            180
+          ],
+          [
+            "goal_town_1",
+            190
+          ],
+          [
+            "viptip",
+            197
+          ],
+          [
+            "office",
+            199
+          ],
+          [
+            "mission3",
+            217
+          ],
+          [
+            "accounting",
+            219
+          ],
+          [
+            "slack",
+            258
+          ],
+          [
+            "capacity1",
+            262
+          ],
+          [
+            "bay4",
+            270
+          ],
+          [
+            "tariff1",
+            280
+          ],
+          [
+            "report_extra",
+            280
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "speed1",
+            304
+          ],
+          [
+            "policehold",
+            304
+          ],
+          [
+            "capacity2",
+            336
+          ],
+          [
+            "goal_town_5",
+            344
+          ],
+          [
+            "boost_extra",
+            355
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "wake",
+            379
+          ],
+          [
+            "viptrail",
+            385
+          ],
+          [
+            "rival2",
+            400
+          ],
+          [
+            "tariff2",
+            405
+          ],
+          [
+            "speed2",
+            419
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "capacity3",
+            436
+          ],
+          [
+            "tariff3",
+            441
+          ],
+          [
+            "speed3",
+            449
+          ],
+          [
+            "capacity4",
+            459
+          ],
+          [
+            "tariff4",
+            494
+          ],
+          [
+            "boost_extra",
+            506
+          ],
+          [
+            "speed4",
+            527
+          ],
+          [
+            "capacity5",
+            532
+          ],
+          [
+            "tariff5",
+            552
+          ],
+          [
+            "speed5",
+            564
+          ],
+          [
+            "complete",
+            565
+          ],
+          [
+            "side",
+            571
+          ],
+          [
+            "side",
+            572
+          ],
+          [
+            "coffee",
+            575
+          ],
+          [
+            "goal_town_2",
+            576
+          ],
+          [
+            "cup1",
+            581
+          ],
+          [
+            "espresso1",
+            608
+          ],
+          [
+            "boost_extra",
+            608
+          ],
+          [
+            "coffeePrice1",
+            621
+          ],
+          [
+            "espresso2",
+            633
+          ],
+          [
+            "coffeePrice2",
+            654
+          ],
+          [
+            "rival3",
+            658
+          ],
+          [
+            "barista1",
+            671
+          ],
+          [
+            "fine1",
+            672
+          ],
+          [
+            "fine",
+            672
+          ],
+          [
+            "espresso3",
+            679
+          ],
+          [
+            "coffeePrice3",
+            720
+          ],
+          [
+            "stage3",
+            720
+          ],
+          [
+            "depot",
+            727
+          ],
+          [
+            "dispatch",
+            728
+          ],
+          [
+            "vanSpeed1",
+            738
+          ],
+          [
+            "rescue",
+            744
+          ],
+          [
+            "vanBattery1",
+            764
+          ],
+          [
+            "vanSpeed2",
+            769
+          ],
+          [
+            "vans1",
+            771
+          ],
+          [
+            "convoy",
+            777
+          ],
+          [
+            "callmissed",
+            778
+          ],
+          [
+            "vanBattery2",
+            786
+          ],
+          [
+            "goal_town_3",
+            787
+          ],
+          [
+            "vanSpeed3",
+            798
+          ],
+          [
+            "vans2",
+            822
+          ],
+          [
+            "boost_extra",
+            856
+          ],
+          [
+            "vanBattery3",
+            864
+          ]
+        ],
+        "doneAt": 565,
+        "served": 123,
+        "earned": 6781,
+        "rating": 4.8,
+        "ratingEnd": 4.3,
+        "missions": 3,
+        "playSec": 865,
+        "mobile": {
+          "cash": 264,
+          "earned": 264,
+          "jobs": 11,
+          "missed": 2,
+          "rescued": 1
+        },
+        "jams": 10,
+        "fines": 1,
+        "lost": 12,
+        "cups": 34,
+        "at": {
+          "rosaStart": 0,
+          "plug": 9,
+          "hungry": 25,
+          "car1": 28,
+          "bay2": 62,
+          "serve": 76,
+          "idlefee": 76,
+          "combo3": 79,
+          "selfplug": 91,
+          "mission1": 107,
+          "bay3": 116,
+          "vipintro": 119,
+          "jam": 132,
+          "mission2": 147,
+          "goal_town_0": 166,
+          "policewarning": 168,
+          "worker": 171,
+          "rival1": 180,
+          "workerplug": 180,
+          "goal_town_1": 190,
+          "viptip": 197,
+          "office": 199,
+          "mission3": 217,
+          "accounting": 219,
+          "slack": 258,
+          "capacity1": 262,
+          "bay4": 270,
+          "tariff1": 280,
+          "report_extra": 280,
+          "convoy": 777,
+          "speed1": 304,
+          "policehold": 304,
+          "capacity2": 336,
+          "goal_town_5": 344,
+          "boost_extra": 856,
+          "blackout": 360,
+          "wake": 379,
+          "viptrail": 385,
+          "rival2": 400,
+          "tariff2": 405,
+          "speed2": 419,
+          "storm": 420,
+          "capacity3": 436,
+          "tariff3": 441,
+          "speed3": 449,
+          "capacity4": 459,
+          "tariff4": 494,
+          "speed4": 527,
+          "capacity5": 532,
+          "tariff5": 552,
+          "speed5": 564,
+          "complete": 565,
+          "side": 572,
+          "coffee": 575,
+          "goal_town_2": 576,
+          "cup1": 581,
+          "espresso1": 608,
+          "coffeePrice1": 621,
+          "espresso2": 633,
+          "coffeePrice2": 654,
+          "rival3": 658,
+          "barista1": 671,
+          "fine1": 672,
+          "fine": 672,
+          "espresso3": 679,
+          "coffeePrice3": 720,
+          "stage3": 720,
+          "depot": 727,
+          "dispatch": 728,
+          "vanSpeed1": 738,
+          "rescue": 744,
+          "vanBattery1": 764,
+          "vanSpeed2": 769,
+          "vans1": 771,
+          "callmissed": 778,
+          "vanBattery2": 786,
+          "goal_town_3": 787,
+          "vanSpeed3": 798,
+          "vans2": 822,
+          "vanBattery3": 864
+        },
+        "errors": []
+      },
+      {
+        "seed": 3,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "serve",
+            76
+          ],
+          [
+            "idlefee",
+            76
+          ],
+          [
+            "bay2",
+            89
+          ],
+          [
+            "selfplug",
+            96
+          ],
+          [
+            "mission1",
+            129
+          ],
+          [
+            "vipintro",
+            134
+          ],
+          [
+            "bay3",
+            137
+          ],
+          [
+            "jam",
+            155
+          ],
+          [
+            "goal_town_0",
+            171
+          ],
+          [
+            "rival1",
+            175
+          ],
+          [
+            "policehold",
+            180
+          ],
+          [
+            "worker",
+            180
+          ],
+          [
+            "viptip",
+            184
+          ],
+          [
+            "goal_town_1",
+            188
+          ],
+          [
+            "workerplug",
+            198
+          ],
+          [
+            "office",
+            201
+          ],
+          [
+            "mission2",
+            204
+          ],
+          [
+            "report_extra",
+            204
+          ],
+          [
+            "accounting",
+            228
+          ],
+          [
+            "slack",
+            244
+          ],
+          [
+            "mission3",
+            254
+          ],
+          [
+            "wake",
+            255
+          ],
+          [
+            "goal_town_5",
+            289
+          ],
+          [
+            "capacity1",
+            290
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "tariff1",
+            305
+          ],
+          [
+            "speed1",
+            307
+          ],
+          [
+            "bay4",
+            309
+          ],
+          [
+            "capacity2",
+            329
+          ],
+          [
+            "viptrail",
+            332
+          ],
+          [
+            "tariff2",
+            339
+          ],
+          [
+            "boost_extra",
+            339
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "speed2",
+            373
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "rival2",
+            444
+          ],
+          [
+            "boost_extra",
+            460
+          ],
+          [
+            "capacity3",
+            485
+          ],
+          [
+            "tariff3",
+            522
+          ],
+          [
+            "boost_extra",
+            578
+          ],
+          [
+            "speed3",
+            591
+          ],
+          [
+            "capacity4",
+            637
+          ],
+          [
+            "tariff4",
+            657
+          ],
+          [
+            "speed4",
+            673
+          ],
+          [
+            "rival3",
+            686
+          ],
+          [
+            "capacity5",
+            688
+          ],
+          [
+            "tariff5",
+            701
+          ],
+          [
+            "boost_extra",
+            706
+          ],
+          [
+            "speed5",
+            718
+          ],
+          [
+            "complete",
+            718
+          ],
+          [
+            "side",
+            724
+          ],
+          [
+            "side",
+            725
+          ],
+          [
+            "coffee",
+            733
+          ],
+          [
+            "goal_town_2",
+            733
+          ],
+          [
+            "cup1",
+            741
+          ],
+          [
+            "espresso1",
+            750
+          ],
+          [
+            "convoy",
+            755
+          ],
+          [
+            "coffeePrice1",
+            770
+          ],
+          [
+            "policewarning",
+            818
+          ],
+          [
+            "report_speed",
+            830
+          ],
+          [
+            "espresso2",
+            846
+          ],
+          [
+            "coffeePrice2",
+            863
+          ],
+          [
+            "barista1",
+            868
+          ],
+          [
+            "espresso3",
+            881
+          ],
+          [
+            "boost_extra",
+            903
+          ],
+          [
+            "coffeePrice3",
+            910
+          ],
+          [
+            "stage3",
+            910
+          ],
+          [
+            "depot",
+            916
+          ],
+          [
+            "vanSpeed1",
+            918
+          ],
+          [
+            "dispatch",
+            918
+          ],
+          [
+            "vanBattery1",
+            931
+          ],
+          [
+            "rescue",
+            934
+          ],
+          [
+            "vanSpeed2",
+            941
+          ],
+          [
+            "callmissed",
+            965
+          ],
+          [
+            "goal_town_3",
+            980
+          ],
+          [
+            "blackout",
+            981
+          ],
+          [
+            "vans1",
+            983
+          ],
+          [
+            "vanBattery2",
+            995
+          ],
+          [
+            "boost_extra",
+            1012
+          ],
+          [
+            "vanSpeed3",
+            1014
+          ]
+        ],
+        "doneAt": 718,
+        "served": 145,
+        "earned": 7118,
+        "rating": 4.5,
+        "ratingEnd": 4,
+        "missions": 3,
+        "playSec": 1018,
+        "mobile": {
+          "cash": 120,
+          "earned": 120,
+          "jobs": 5,
+          "missed": 3,
+          "rescued": 0
+        },
+        "jams": 14,
+        "fines": 0,
+        "lost": 10,
+        "cups": 34,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "serve": 76,
+          "idlefee": 76,
+          "bay2": 89,
+          "selfplug": 96,
+          "mission1": 129,
+          "vipintro": 134,
+          "bay3": 137,
+          "jam": 155,
+          "goal_town_0": 171,
+          "rival1": 175,
+          "policehold": 180,
+          "worker": 180,
+          "viptip": 184,
+          "goal_town_1": 188,
+          "workerplug": 198,
+          "office": 201,
+          "mission2": 204,
+          "report_extra": 204,
+          "accounting": 228,
+          "slack": 244,
+          "mission3": 254,
+          "wake": 255,
+          "goal_town_5": 289,
+          "capacity1": 290,
+          "convoy": 755,
+          "tariff1": 305,
+          "speed1": 307,
+          "bay4": 309,
+          "capacity2": 329,
+          "viptrail": 332,
+          "tariff2": 339,
+          "boost_extra": 1012,
+          "blackout": 981,
+          "speed2": 373,
+          "storm": 420,
+          "rival2": 444,
+          "capacity3": 485,
+          "tariff3": 522,
+          "speed3": 591,
+          "capacity4": 637,
+          "tariff4": 657,
+          "speed4": 673,
+          "rival3": 686,
+          "capacity5": 688,
+          "tariff5": 701,
+          "speed5": 718,
+          "complete": 718,
+          "side": 725,
+          "coffee": 733,
+          "goal_town_2": 733,
+          "cup1": 741,
+          "espresso1": 750,
+          "coffeePrice1": 770,
+          "policewarning": 818,
+          "report_speed": 830,
+          "espresso2": 846,
+          "coffeePrice2": 863,
+          "barista1": 868,
+          "espresso3": 881,
+          "coffeePrice3": 910,
+          "stage3": 910,
+          "depot": 916,
+          "vanSpeed1": 918,
+          "dispatch": 918,
+          "vanBattery1": 931,
+          "rescue": 934,
+          "vanSpeed2": 941,
+          "callmissed": 965,
+          "goal_town_3": 980,
+          "vans1": 983,
+          "vanBattery2": 995,
+          "vanSpeed3": 1014
+        },
+        "errors": []
+      }
+    ]
+  },
+  "casual": {
+    "stat": {
+      "car1": {
+        "median": 26,
+        "p90": 26
+      },
+      "bay2": {
+        "median": 55,
+        "p90": 57
+      },
+      "bay3": {
+        "median": 102,
+        "p90": 106
+      },
+      "worker": {
+        "median": 152,
+        "p90": 153
+      },
+      "office": {
+        "median": 180,
+        "p90": 183
+      },
+      "accounting": {
+        "median": 194,
+        "p90": 196
+      },
+      "bay4": {
+        "median": 231,
+        "p90": 269
+      },
+      "complete": {
+        "median": 440,
+        "p90": 452
+      },
+      "coffee": {
+        "median": 480,
+        "p90": 483
+      },
+      "stage3": {
+        "median": 524,
+        "p90": 543
+      },
+      "depot": {
+        "median": 537,
+        "p90": 548
+      },
+      "stage4": {
+        "median": 703,
+        "p90": 731
+      },
+      "wash": {
+        "median": 722,
+        "p90": 722
+      },
+      "rating": 4.8,
+      "missions": 3,
+      "vanPerMin": 76,
+      "missedShare": 0.058823529411764705,
+      "fines": 0,
+      "jams": 9,
+      "cups": 30
+    },
+    "runs": [
+      {
+        "seed": 1,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "serve",
+            45
+          ],
+          [
+            "idlefee",
+            45
+          ],
+          [
+            "bay2",
+            57
+          ],
+          [
+            "combo3",
+            73
+          ],
+          [
+            "mission1",
+            77
+          ],
+          [
+            "selfplug",
+            94
+          ],
+          [
+            "bay3",
+            106
+          ],
+          [
+            "vipintro",
+            110
+          ],
+          [
+            "jam",
+            126
+          ],
+          [
+            "mission2",
+            141
+          ],
+          [
+            "viptip",
+            146
+          ],
+          [
+            "goal_town_1",
+            147
+          ],
+          [
+            "goal_town_0",
+            150
+          ],
+          [
+            "policehold",
+            153
+          ],
+          [
+            "worker",
+            153
+          ],
+          [
+            "workerplug",
+            161
+          ],
+          [
+            "viptrail",
+            173
+          ],
+          [
+            "rival1",
+            177
+          ],
+          [
+            "capacity1",
+            177
+          ],
+          [
+            "tariff1",
+            179
+          ],
+          [
+            "office",
+            180
+          ],
+          [
+            "report_extra",
+            186
+          ],
+          [
+            "mission3",
+            191
+          ],
+          [
+            "speed1",
+            191
+          ],
+          [
+            "accounting",
+            196
+          ],
+          [
+            "slack",
+            246
+          ],
+          [
+            "capacity2",
+            246
+          ],
+          [
+            "bay4",
+            269
+          ],
+          [
+            "tariff2",
+            286
+          ],
+          [
+            "speed2",
+            296
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "boost_extra",
+            312
+          ],
+          [
+            "capacity3",
+            314
+          ],
+          [
+            "tariff3",
+            332
+          ],
+          [
+            "wake",
+            343
+          ],
+          [
+            "speed3",
+            344
+          ],
+          [
+            "goal_town_5",
+            345
+          ],
+          [
+            "capacity4",
+            348
+          ],
+          [
+            "tariff4",
+            350
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "speed4",
+            362
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "capacity5",
+            428
+          ],
+          [
+            "boost_extra",
+            428
+          ],
+          [
+            "tariff5",
+            438
+          ],
+          [
+            "rival2",
+            449
+          ],
+          [
+            "speed5",
+            452
+          ],
+          [
+            "complete",
+            452
+          ],
+          [
+            "side",
+            457
+          ],
+          [
+            "side",
+            462
+          ],
+          [
+            "coffee",
+            480
+          ],
+          [
+            "goal_town_2",
+            481
+          ],
+          [
+            "espresso1",
+            482
+          ],
+          [
+            "cup1",
+            488
+          ],
+          [
+            "coffeePrice1",
+            490
+          ],
+          [
+            "espresso2",
+            496
+          ],
+          [
+            "coffeePrice2",
+            508
+          ],
+          [
+            "barista1",
+            524
+          ],
+          [
+            "espresso3",
+            529
+          ],
+          [
+            "coffeePrice3",
+            543
+          ],
+          [
+            "stage3",
+            543
+          ],
+          [
+            "depot",
+            548
+          ],
+          [
+            "vanSpeed1",
+            549
+          ],
+          [
+            "dispatch",
+            549
+          ],
+          [
+            "vanBattery1",
+            557
+          ],
+          [
+            "rescue",
+            565
+          ],
+          [
+            "vanSpeed2",
+            571
+          ],
+          [
+            "boost_extra",
+            585
+          ],
+          [
+            "callmissed",
+            591
+          ],
+          [
+            "vans1",
+            595
+          ],
+          [
+            "goal_town_3",
+            605
+          ],
+          [
+            "vanBattery2",
+            606
+          ],
+          [
+            "vanSpeed3",
+            638
+          ],
+          [
+            "report_speed",
+            656
+          ],
+          [
+            "vans2",
+            659
+          ],
+          [
+            "vanBattery3",
+            677
+          ],
+          [
+            "boost_extra",
+            685
+          ],
+          [
+            "dispatcher1",
+            717
+          ],
+          [
+            "rival3",
+            728
+          ],
+          [
+            "vanSpeed4",
+            731
+          ],
+          [
+            "stage4",
+            731
+          ]
+        ],
+        "doneAt": 452,
+        "served": 107,
+        "earned": 6588,
+        "rating": 4.8,
+        "ratingEnd": 4.8,
+        "missions": 3,
+        "playSec": 752,
+        "mobile": {
+          "cash": 415,
+          "earned": 415,
+          "jobs": 16,
+          "missed": 1,
+          "rescued": 1
+        },
+        "jams": 12,
+        "fines": 0,
+        "lost": 0,
+        "cups": 30,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "serve": 45,
+          "idlefee": 45,
+          "bay2": 57,
+          "combo3": 73,
+          "mission1": 77,
+          "selfplug": 94,
+          "bay3": 106,
+          "vipintro": 110,
+          "jam": 126,
+          "mission2": 141,
+          "viptip": 146,
+          "goal_town_1": 147,
+          "goal_town_0": 150,
+          "policehold": 153,
+          "worker": 153,
+          "workerplug": 161,
+          "viptrail": 173,
+          "rival1": 177,
+          "capacity1": 177,
+          "tariff1": 179,
+          "office": 180,
+          "report_extra": 186,
+          "mission3": 191,
+          "speed1": 191,
+          "accounting": 196,
+          "slack": 246,
+          "capacity2": 246,
+          "bay4": 269,
+          "tariff2": 286,
+          "speed2": 296,
+          "convoy": 300,
+          "boost_extra": 685,
+          "capacity3": 314,
+          "tariff3": 332,
+          "wake": 343,
+          "speed3": 344,
+          "goal_town_5": 345,
+          "capacity4": 348,
+          "tariff4": 350,
+          "blackout": 360,
+          "speed4": 362,
+          "storm": 420,
+          "capacity5": 428,
+          "tariff5": 438,
+          "rival2": 449,
+          "speed5": 452,
+          "complete": 452,
+          "side": 462,
+          "coffee": 480,
+          "goal_town_2": 481,
+          "espresso1": 482,
+          "cup1": 488,
+          "coffeePrice1": 490,
+          "espresso2": 496,
+          "coffeePrice2": 508,
+          "barista1": 524,
+          "espresso3": 529,
+          "coffeePrice3": 543,
+          "stage3": 543,
+          "depot": 548,
+          "vanSpeed1": 549,
+          "dispatch": 549,
+          "vanBattery1": 557,
+          "rescue": 565,
+          "vanSpeed2": 571,
+          "callmissed": 591,
+          "vans1": 595,
+          "goal_town_3": 605,
+          "vanBattery2": 606,
+          "vanSpeed3": 638,
+          "report_speed": 656,
+          "vans2": 659,
+          "vanBattery3": 677,
+          "dispatcher1": 717,
+          "rival3": 728,
+          "vanSpeed4": 731,
+          "stage4": 731
+        },
+        "errors": []
+      },
+      {
+        "seed": 2,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "serve",
+            42
+          ],
+          [
+            "idlefee",
+            43
+          ],
+          [
+            "bay2",
+            51
+          ],
+          [
+            "combo3",
+            67
+          ],
+          [
+            "mission1",
+            71
+          ],
+          [
+            "selfplug",
+            87
+          ],
+          [
+            "bay3",
+            100
+          ],
+          [
+            "vipintro",
+            105
+          ],
+          [
+            "jam",
+            120
+          ],
+          [
+            "mission2",
+            137
+          ],
+          [
+            "goal_town_1",
+            145
+          ],
+          [
+            "goal_town_0",
+            146
+          ],
+          [
+            "policehold",
+            149
+          ],
+          [
+            "worker",
+            149
+          ],
+          [
+            "viptip",
+            153
+          ],
+          [
+            "viptrail",
+            169
+          ],
+          [
+            "workerplug",
+            172
+          ],
+          [
+            "office",
+            180
+          ],
+          [
+            "report_extra",
+            183
+          ],
+          [
+            "rival1",
+            188
+          ],
+          [
+            "accounting",
+            192
+          ],
+          [
+            "mission3",
+            200
+          ],
+          [
+            "capacity1",
+            223
+          ],
+          [
+            "bay4",
+            225
+          ],
+          [
+            "tariff1",
+            225
+          ],
+          [
+            "speed1",
+            239
+          ],
+          [
+            "slack",
+            246
+          ],
+          [
+            "capacity2",
+            253
+          ],
+          [
+            "wake",
+            265
+          ],
+          [
+            "tariff2",
+            271
+          ],
+          [
+            "speed2",
+            273
+          ],
+          [
+            "capacity3",
+            277
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "tariff3",
+            309
+          ],
+          [
+            "goal_town_5",
+            320
+          ],
+          [
+            "speed3",
+            321
+          ],
+          [
+            "boost_extra",
+            331
+          ],
+          [
+            "capacity4",
+            337
+          ],
+          [
+            "tariff4",
+            341
+          ],
+          [
+            "speed4",
+            345
+          ],
+          [
+            "capacity5",
+            356
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "tariff5",
+            396
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "speed5",
+            440
+          ],
+          [
+            "complete",
+            440
+          ],
+          [
+            "rival2",
+            445
+          ],
+          [
+            "side",
+            448
+          ],
+          [
+            "side",
+            450
+          ],
+          [
+            "boost_extra",
+            458
+          ],
+          [
+            "coffee",
+            465
+          ],
+          [
+            "goal_town_2",
+            465
+          ],
+          [
+            "cup1",
+            469
+          ],
+          [
+            "espresso1",
+            470
+          ],
+          [
+            "coffeePrice1",
+            472
+          ],
+          [
+            "espresso2",
+            476
+          ],
+          [
+            "coffeePrice2",
+            494
+          ],
+          [
+            "barista1",
+            509
+          ],
+          [
+            "espresso3",
+            520
+          ],
+          [
+            "coffeePrice3",
+            524
+          ],
+          [
+            "stage3",
+            524
+          ],
+          [
+            "depot",
+            534
+          ],
+          [
+            "dispatch",
+            536
+          ],
+          [
+            "vanSpeed1",
+            548
+          ],
+          [
+            "vanBattery1",
+            550
+          ],
+          [
+            "rescue",
+            553
+          ],
+          [
+            "boost_extra",
+            554
+          ],
+          [
+            "vanSpeed2",
+            566
+          ],
+          [
+            "vans1",
+            580
+          ],
+          [
+            "callmissed",
+            586
+          ],
+          [
+            "vanBattery2",
+            586
+          ],
+          [
+            "goal_town_3",
+            590
+          ],
+          [
+            "vanSpeed3",
+            608
+          ],
+          [
+            "vans2",
+            640
+          ],
+          [
+            "boost_extra",
+            660
+          ],
+          [
+            "vanBattery3",
+            662
+          ],
+          [
+            "rival3",
+            687
+          ],
+          [
+            "dispatcher1",
+            698
+          ],
+          [
+            "vanSpeed4",
+            700
+          ],
+          [
+            "stage4",
+            701
+          ],
+          [
+            "convoy",
+            705
+          ],
+          [
+            "wash",
+            722
+          ],
+          [
+            "ready_highway",
+            722
+          ]
+        ],
+        "doneAt": 440,
+        "served": 110,
+        "earned": 6676,
+        "rating": 4.6,
+        "ratingEnd": 4.4,
+        "missions": 3,
+        "playSec": 740,
+        "mobile": {
+          "cash": 381,
+          "earned": 381,
+          "jobs": 16,
+          "missed": 1,
+          "rescued": 0
+        },
+        "jams": 9,
+        "fines": 0,
+        "lost": 0,
+        "cups": 30,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "serve": 42,
+          "idlefee": 43,
+          "bay2": 51,
+          "combo3": 67,
+          "mission1": 71,
+          "selfplug": 87,
+          "bay3": 100,
+          "vipintro": 105,
+          "jam": 120,
+          "mission2": 137,
+          "goal_town_1": 145,
+          "goal_town_0": 146,
+          "policehold": 149,
+          "worker": 149,
+          "viptip": 153,
+          "viptrail": 169,
+          "workerplug": 172,
+          "office": 180,
+          "report_extra": 183,
+          "rival1": 188,
+          "accounting": 192,
+          "mission3": 200,
+          "capacity1": 223,
+          "bay4": 225,
+          "tariff1": 225,
+          "speed1": 239,
+          "slack": 246,
+          "capacity2": 253,
+          "wake": 265,
+          "tariff2": 271,
+          "speed2": 273,
+          "capacity3": 277,
+          "convoy": 705,
+          "tariff3": 309,
+          "goal_town_5": 320,
+          "speed3": 321,
+          "boost_extra": 660,
+          "capacity4": 337,
+          "tariff4": 341,
+          "speed4": 345,
+          "capacity5": 356,
+          "blackout": 360,
+          "tariff5": 396,
+          "storm": 420,
+          "speed5": 440,
+          "complete": 440,
+          "rival2": 445,
+          "side": 450,
+          "coffee": 465,
+          "goal_town_2": 465,
+          "cup1": 469,
+          "espresso1": 470,
+          "coffeePrice1": 472,
+          "espresso2": 476,
+          "coffeePrice2": 494,
+          "barista1": 509,
+          "espresso3": 520,
+          "coffeePrice3": 524,
+          "stage3": 524,
+          "depot": 534,
+          "dispatch": 536,
+          "vanSpeed1": 548,
+          "vanBattery1": 550,
+          "rescue": 553,
+          "vanSpeed2": 566,
+          "vans1": 580,
+          "callmissed": 586,
+          "vanBattery2": 586,
+          "goal_town_3": 590,
+          "vanSpeed3": 608,
+          "vans2": 640,
+          "vanBattery3": 662,
+          "rival3": 687,
+          "dispatcher1": 698,
+          "vanSpeed4": 700,
+          "stage4": 701,
+          "wash": 722,
+          "ready_highway": 722
+        },
+        "errors": []
+      },
+      {
+        "seed": 3,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "serve",
+            43
+          ],
+          [
+            "idlefee",
+            44
+          ],
+          [
+            "bay2",
+            55
+          ],
+          [
+            "combo3",
+            71
+          ],
+          [
+            "mission1",
+            75
+          ],
+          [
+            "selfplug",
+            91
+          ],
+          [
+            "bay3",
+            102
+          ],
+          [
+            "vipintro",
+            106
+          ],
+          [
+            "goal_town_1",
+            143
+          ],
+          [
+            "jam",
+            145
+          ],
+          [
+            "goal_town_0",
+            150
+          ],
+          [
+            "policehold",
+            152
+          ],
+          [
+            "worker",
+            152
+          ],
+          [
+            "mission2",
+            154
+          ],
+          [
+            "workerplug",
+            172
+          ],
+          [
+            "rival1",
+            180
+          ],
+          [
+            "office",
+            183
+          ],
+          [
+            "report_extra",
+            186
+          ],
+          [
+            "accounting",
+            194
+          ],
+          [
+            "mission3",
+            207
+          ],
+          [
+            "viptip",
+            224
+          ],
+          [
+            "capacity1",
+            229
+          ],
+          [
+            "bay4",
+            231
+          ],
+          [
+            "slack",
+            250
+          ],
+          [
+            "goal_town_5",
+            257
+          ],
+          [
+            "tariff1",
+            257
+          ],
+          [
+            "boost_extra",
+            273
+          ],
+          [
+            "speed1",
+            279
+          ],
+          [
+            "capacity2",
+            283
+          ],
+          [
+            "tariff2",
+            289
+          ],
+          [
+            "speed2",
+            293
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "capacity3",
+            301
+          ],
+          [
+            "tariff3",
+            313
+          ],
+          [
+            "speed3",
+            336
+          ],
+          [
+            "wake",
+            348
+          ],
+          [
+            "capacity4",
+            354
+          ],
+          [
+            "tariff4",
+            356
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "speed4",
+            364
+          ],
+          [
+            "capacity5",
+            398
+          ],
+          [
+            "boost_extra",
+            404
+          ],
+          [
+            "tariff5",
+            412
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "rival2",
+            423
+          ],
+          [
+            "speed5",
+            433
+          ],
+          [
+            "complete",
+            433
+          ],
+          [
+            "side",
+            445
+          ],
+          [
+            "side",
+            479
+          ],
+          [
+            "coffee",
+            483
+          ],
+          [
+            "goal_town_2",
+            484
+          ],
+          [
+            "espresso1",
+            487
+          ],
+          [
+            "cup1",
+            489
+          ],
+          [
+            "coffeePrice1",
+            493
+          ],
+          [
+            "espresso2",
+            503
+          ],
+          [
+            "policewarning",
+            503
+          ],
+          [
+            "coffeePrice2",
+            505
+          ],
+          [
+            "barista1",
+            507
+          ],
+          [
+            "espresso3",
+            511
+          ],
+          [
+            "coffeePrice3",
+            513
+          ],
+          [
+            "stage3",
+            513
+          ],
+          [
+            "depot",
+            537
+          ],
+          [
+            "dispatch",
+            539
+          ],
+          [
+            "rescue",
+            555
+          ],
+          [
+            "vanSpeed1",
+            558
+          ],
+          [
+            "vanBattery1",
+            560
+          ],
+          [
+            "mission4",
+            579
+          ],
+          [
+            "callmissed",
+            581
+          ],
+          [
+            "vanSpeed2",
+            583
+          ],
+          [
+            "viptrail",
+            583
+          ],
+          [
+            "vans1",
+            591
+          ],
+          [
+            "goal_town_3",
+            596
+          ],
+          [
+            "vanBattery2",
+            603
+          ],
+          [
+            "vanSpeed3",
+            617
+          ],
+          [
+            "boost_extra",
+            637
+          ],
+          [
+            "vans2",
+            647
+          ],
+          [
+            "mission5",
+            671
+          ],
+          [
+            "rival3",
+            676
+          ],
+          [
+            "vanBattery3",
+            677
+          ],
+          [
+            "convoy",
+            679
+          ],
+          [
+            "dispatcher1",
+            681
+          ],
+          [
+            "vanSpeed4",
+            703
+          ],
+          [
+            "stage4",
+            703
+          ]
+        ],
+        "doneAt": 433,
+        "served": 104,
+        "earned": 6310,
+        "rating": 4.8,
+        "ratingEnd": 4.5,
+        "missions": 5,
+        "playSec": 733,
+        "mobile": {
+          "cash": 373,
+          "earned": 373,
+          "jobs": 16,
+          "missed": 2,
+          "rescued": 0
+        },
+        "jams": 5,
+        "fines": 0,
+        "lost": 5,
+        "cups": 32,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "serve": 43,
+          "idlefee": 44,
+          "bay2": 55,
+          "combo3": 71,
+          "mission1": 75,
+          "selfplug": 91,
+          "bay3": 102,
+          "vipintro": 106,
+          "goal_town_1": 143,
+          "jam": 145,
+          "goal_town_0": 150,
+          "policehold": 152,
+          "worker": 152,
+          "mission2": 154,
+          "workerplug": 172,
+          "rival1": 180,
+          "office": 183,
+          "report_extra": 186,
+          "accounting": 194,
+          "mission3": 207,
+          "viptip": 224,
+          "capacity1": 229,
+          "bay4": 231,
+          "slack": 250,
+          "goal_town_5": 257,
+          "tariff1": 257,
+          "boost_extra": 637,
+          "speed1": 279,
+          "capacity2": 283,
+          "tariff2": 289,
+          "speed2": 293,
+          "convoy": 679,
+          "capacity3": 301,
+          "tariff3": 313,
+          "speed3": 336,
+          "wake": 348,
+          "capacity4": 354,
+          "tariff4": 356,
+          "blackout": 360,
+          "speed4": 364,
+          "capacity5": 398,
+          "tariff5": 412,
+          "storm": 420,
+          "rival2": 423,
+          "speed5": 433,
+          "complete": 433,
+          "side": 479,
+          "coffee": 483,
+          "goal_town_2": 484,
+          "espresso1": 487,
+          "cup1": 489,
+          "coffeePrice1": 493,
+          "espresso2": 503,
+          "policewarning": 503,
+          "coffeePrice2": 505,
+          "barista1": 507,
+          "espresso3": 511,
+          "coffeePrice3": 513,
+          "stage3": 513,
+          "depot": 537,
+          "dispatch": 539,
+          "rescue": 555,
+          "vanSpeed1": 558,
+          "vanBattery1": 560,
+          "mission4": 579,
+          "callmissed": 581,
+          "vanSpeed2": 583,
+          "viptrail": 583,
+          "vans1": 591,
+          "goal_town_3": 596,
+          "vanBattery2": 603,
+          "vanSpeed3": 617,
+          "vans2": 647,
+          "mission5": 671,
+          "rival3": 676,
+          "vanBattery3": 677,
+          "dispatcher1": 681,
+          "vanSpeed4": 703,
+          "stage4": 703
+        },
+        "errors": []
+      }
+    ]
+  },
+  "engaged": {
+    "stat": {
+      "car1": {
+        "median": 21,
+        "p90": 21
+      },
+      "bay2": {
+        "median": 43,
+        "p90": 43
+      },
+      "bay3": {
+        "median": 66,
+        "p90": 88
+      },
+      "worker": {
+        "median": 110,
+        "p90": 149
+      },
+      "office": {
+        "median": 139,
+        "p90": 169
+      },
+      "accounting": {
+        "median": 158,
+        "p90": 194
+      },
+      "bay4": {
+        "median": 184,
+        "p90": 231
+      },
+      "complete": {
+        "median": 365,
+        "p90": 367
+      },
+      "coffee": {
+        "median": 391,
+        "p90": 432
+      },
+      "stage3": {
+        "median": 430,
+        "p90": 449
+      },
+      "depot": {
+        "median": 450,
+        "p90": 467
+      },
+      "stage4": {
+        "median": 640,
+        "p90": 640
+      },
+      "wash": {
+        "median": 656,
+        "p90": 656
+      },
+      "rating": 4.7,
+      "missions": 5,
+      "vanPerMin": 89,
+      "missedShare": 0.05,
+      "fines": 0,
+      "jams": 4,
+      "cups": 32
+    },
+    "runs": [
+      {
+        "seed": 1,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "serve",
+            11
+          ],
+          [
+            "idlefee",
+            14
+          ],
+          [
+            "car1",
+            21
+          ],
+          [
+            "bay2",
+            43
+          ],
+          [
+            "selfplug",
+            52
+          ],
+          [
+            "mission1",
+            55
+          ],
+          [
+            "combo3",
+            57
+          ],
+          [
+            "capacity1",
+            65
+          ],
+          [
+            "bay3",
+            66
+          ],
+          [
+            "mission2",
+            92
+          ],
+          [
+            "goal_town_1",
+            98
+          ],
+          [
+            "vipintro",
+            99
+          ],
+          [
+            "worker",
+            108
+          ],
+          [
+            "workerplug",
+            110
+          ],
+          [
+            "viptip",
+            116
+          ],
+          [
+            "viptrail",
+            121
+          ],
+          [
+            "goal_town_0",
+            123
+          ],
+          [
+            "office",
+            139
+          ],
+          [
+            "mission3",
+            147
+          ],
+          [
+            "accounting",
+            158
+          ],
+          [
+            "rival1",
+            166
+          ],
+          [
+            "tariff1",
+            182
+          ],
+          [
+            "speed1",
+            183
+          ],
+          [
+            "bay4",
+            184
+          ],
+          [
+            "slack",
+            190
+          ],
+          [
+            "wake",
+            199
+          ],
+          [
+            "mission4",
+            202
+          ],
+          [
+            "capacity2",
+            202
+          ],
+          [
+            "tariff2",
+            203
+          ],
+          [
+            "report_extra",
+            204
+          ],
+          [
+            "speed2",
+            207
+          ],
+          [
+            "capacity3",
+            218
+          ],
+          [
+            "goal_town_5",
+            224
+          ],
+          [
+            "tariff3",
+            224
+          ],
+          [
+            "speed3",
+            225
+          ],
+          [
+            "mission5",
+            238
+          ],
+          [
+            "capacity4",
+            240
+          ],
+          [
+            "tariff4",
+            245
+          ],
+          [
+            "speed4",
+            278
+          ],
+          [
+            "capacity5",
+            291
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "boost_extra",
+            304
+          ],
+          [
+            "jam",
+            313
+          ],
+          [
+            "tariff5",
+            326
+          ],
+          [
+            "speed5",
+            344
+          ],
+          [
+            "complete",
+            344
+          ],
+          [
+            "side",
+            349
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "hungry",
+            364
+          ],
+          [
+            "side",
+            364
+          ],
+          [
+            "coffee",
+            381
+          ],
+          [
+            "goal_town_2",
+            382
+          ],
+          [
+            "espresso1",
+            382
+          ],
+          [
+            "cup1",
+            386
+          ],
+          [
+            "coffeePrice1",
+            389
+          ],
+          [
+            "espresso2",
+            394
+          ],
+          [
+            "coffeePrice2",
+            402
+          ],
+          [
+            "barista1",
+            403
+          ],
+          [
+            "espresso3",
+            405
+          ],
+          [
+            "coffeePrice3",
+            414
+          ],
+          [
+            "stage3",
+            414
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "rival2",
+            427
+          ],
+          [
+            "depot",
+            432
+          ],
+          [
+            "vanSpeed1",
+            433
+          ],
+          [
+            "dispatch",
+            433
+          ],
+          [
+            "vanBattery1",
+            437
+          ],
+          [
+            "boost_extra",
+            445
+          ],
+          [
+            "rescue",
+            446
+          ],
+          [
+            "vanSpeed2",
+            447
+          ],
+          [
+            "vans1",
+            459
+          ],
+          [
+            "goal_town_3",
+            470
+          ],
+          [
+            "vanBattery2",
+            470
+          ],
+          [
+            "vanSpeed3",
+            493
+          ],
+          [
+            "vans2",
+            517
+          ],
+          [
+            "boost_extra",
+            540
+          ],
+          [
+            "vanBattery3",
+            548
+          ],
+          [
+            "dispatcher1",
+            579
+          ],
+          [
+            "vanSpeed4",
+            629
+          ],
+          [
+            "stage4",
+            629
+          ]
+        ],
+        "doneAt": 344,
+        "served": 99,
+        "earned": 6531,
+        "rating": 4.7,
+        "ratingEnd": 4.2,
+        "missions": 5,
+        "playSec": 644,
+        "mobile": {
+          "cash": 418,
+          "earned": 443,
+          "jobs": 19,
+          "missed": 0,
+          "rescued": 0
+        },
+        "jams": 2,
+        "fines": 0,
+        "lost": 0,
+        "cups": 32,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "serve": 11,
+          "idlefee": 14,
+          "car1": 21,
+          "bay2": 43,
+          "selfplug": 52,
+          "mission1": 55,
+          "combo3": 57,
+          "capacity1": 65,
+          "bay3": 66,
+          "mission2": 92,
+          "goal_town_1": 98,
+          "vipintro": 99,
+          "worker": 108,
+          "workerplug": 110,
+          "viptip": 116,
+          "viptrail": 121,
+          "goal_town_0": 123,
+          "office": 139,
+          "mission3": 147,
+          "accounting": 158,
+          "rival1": 166,
+          "tariff1": 182,
+          "speed1": 183,
+          "bay4": 184,
+          "slack": 190,
+          "wake": 199,
+          "mission4": 202,
+          "capacity2": 202,
+          "tariff2": 203,
+          "report_extra": 204,
+          "speed2": 207,
+          "capacity3": 218,
+          "goal_town_5": 224,
+          "tariff3": 224,
+          "speed3": 225,
+          "mission5": 238,
+          "capacity4": 240,
+          "tariff4": 245,
+          "speed4": 278,
+          "capacity5": 291,
+          "convoy": 300,
+          "boost_extra": 540,
+          "jam": 313,
+          "tariff5": 326,
+          "speed5": 344,
+          "complete": 344,
+          "side": 364,
+          "blackout": 360,
+          "hungry": 364,
+          "coffee": 381,
+          "goal_town_2": 382,
+          "espresso1": 382,
+          "cup1": 386,
+          "coffeePrice1": 389,
+          "espresso2": 394,
+          "coffeePrice2": 402,
+          "barista1": 403,
+          "espresso3": 405,
+          "coffeePrice3": 414,
+          "stage3": 414,
+          "storm": 420,
+          "rival2": 427,
+          "depot": 432,
+          "vanSpeed1": 433,
+          "dispatch": 433,
+          "vanBattery1": 437,
+          "rescue": 446,
+          "vanSpeed2": 447,
+          "vans1": 459,
+          "goal_town_3": 470,
+          "vanBattery2": 470,
+          "vanSpeed3": 493,
+          "vans2": 517,
+          "vanBattery3": 548,
+          "dispatcher1": 579,
+          "vanSpeed4": 629,
+          "stage4": 629
+        },
+        "errors": []
+      },
+      {
+        "seed": 2,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "serve",
+            11
+          ],
+          [
+            "idlefee",
+            14
+          ],
+          [
+            "car1",
+            21
+          ],
+          [
+            "capacity1",
+            42
+          ],
+          [
+            "bay2",
+            43
+          ],
+          [
+            "mission1",
+            56
+          ],
+          [
+            "combo3",
+            57
+          ],
+          [
+            "bay3",
+            66
+          ],
+          [
+            "selfplug",
+            75
+          ],
+          [
+            "mission2",
+            93
+          ],
+          [
+            "vipintro",
+            100
+          ],
+          [
+            "goal_town_1",
+            100
+          ],
+          [
+            "worker",
+            110
+          ],
+          [
+            "workerplug",
+            117
+          ],
+          [
+            "viptip",
+            118
+          ],
+          [
+            "viptrail",
+            125
+          ],
+          [
+            "goal_town_0",
+            126
+          ],
+          [
+            "office",
+            133
+          ],
+          [
+            "mission3",
+            148
+          ],
+          [
+            "accounting",
+            150
+          ],
+          [
+            "rival1",
+            165
+          ],
+          [
+            "tariff1",
+            167
+          ],
+          [
+            "bay4",
+            168
+          ],
+          [
+            "speed1",
+            182
+          ],
+          [
+            "slack",
+            186
+          ],
+          [
+            "wake",
+            186
+          ],
+          [
+            "capacity2",
+            187
+          ],
+          [
+            "tariff2",
+            191
+          ],
+          [
+            "speed2",
+            206
+          ],
+          [
+            "capacity3",
+            219
+          ],
+          [
+            "goal_town_5",
+            223
+          ],
+          [
+            "tariff3",
+            223
+          ],
+          [
+            "speed3",
+            224
+          ],
+          [
+            "report_extra",
+            241
+          ],
+          [
+            "boost_extra",
+            242
+          ],
+          [
+            "capacity4",
+            249
+          ],
+          [
+            "tariff4",
+            276
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "speed4",
+            300
+          ],
+          [
+            "jam",
+            300
+          ],
+          [
+            "capacity5",
+            331
+          ],
+          [
+            "policehold",
+            331
+          ],
+          [
+            "hungry",
+            333
+          ],
+          [
+            "boost_extra",
+            334
+          ],
+          [
+            "tariff5",
+            342
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "speed5",
+            365
+          ],
+          [
+            "complete",
+            365
+          ],
+          [
+            "side",
+            373
+          ],
+          [
+            "side",
+            374
+          ],
+          [
+            "coffee",
+            391
+          ],
+          [
+            "goal_town_2",
+            392
+          ],
+          [
+            "espresso1",
+            392
+          ],
+          [
+            "coffeePrice1",
+            393
+          ],
+          [
+            "cup1",
+            395
+          ],
+          [
+            "espresso2",
+            397
+          ],
+          [
+            "coffeePrice2",
+            398
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "barista1",
+            423
+          ],
+          [
+            "espresso3",
+            424
+          ],
+          [
+            "rival2",
+            429
+          ],
+          [
+            "coffeePrice3",
+            430
+          ],
+          [
+            "stage3",
+            430
+          ],
+          [
+            "boost_extra",
+            434
+          ],
+          [
+            "depot",
+            450
+          ],
+          [
+            "dispatch",
+            451
+          ],
+          [
+            "vanSpeed1",
+            455
+          ],
+          [
+            "rescue",
+            461
+          ],
+          [
+            "vanBattery1",
+            467
+          ],
+          [
+            "vanSpeed2",
+            481
+          ],
+          [
+            "goal_town_3",
+            497
+          ],
+          [
+            "vans1",
+            497
+          ],
+          [
+            "callmissed",
+            502
+          ],
+          [
+            "vanBattery2",
+            511
+          ],
+          [
+            "vanSpeed3",
+            520
+          ],
+          [
+            "boost_extra",
+            527
+          ],
+          [
+            "vans2",
+            546
+          ],
+          [
+            "vanBattery3",
+            573
+          ],
+          [
+            "dispatcher1",
+            615
+          ],
+          [
+            "policewarning",
+            620
+          ],
+          [
+            "vanSpeed4",
+            640
+          ],
+          [
+            "stage4",
+            640
+          ],
+          [
+            "rival3",
+            654
+          ],
+          [
+            "wash",
+            656
+          ],
+          [
+            "ready_highway",
+            657
+          ],
+          [
+            "washSpeed1",
+            657
+          ],
+          [
+            "washPopularity1",
+            658
+          ],
+          [
+            "washPrice1",
+            659
+          ]
+        ],
+        "doneAt": 365,
+        "served": 99,
+        "earned": 6804,
+        "rating": 4.6,
+        "ratingEnd": 4.6,
+        "missions": 3,
+        "playSec": 665,
+        "mobile": {
+          "cash": 453,
+          "earned": 453,
+          "jobs": 19,
+          "missed": 1,
+          "rescued": 0
+        },
+        "jams": 6,
+        "fines": 0,
+        "lost": 6,
+        "cups": 34,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "serve": 11,
+          "idlefee": 14,
+          "car1": 21,
+          "capacity1": 42,
+          "bay2": 43,
+          "mission1": 56,
+          "combo3": 57,
+          "bay3": 66,
+          "selfplug": 75,
+          "mission2": 93,
+          "vipintro": 100,
+          "goal_town_1": 100,
+          "worker": 110,
+          "workerplug": 117,
+          "viptip": 118,
+          "viptrail": 125,
+          "goal_town_0": 126,
+          "office": 133,
+          "mission3": 148,
+          "accounting": 150,
+          "rival1": 165,
+          "tariff1": 167,
+          "bay4": 168,
+          "speed1": 182,
+          "slack": 186,
+          "wake": 186,
+          "capacity2": 187,
+          "tariff2": 191,
+          "speed2": 206,
+          "capacity3": 219,
+          "goal_town_5": 223,
+          "tariff3": 223,
+          "speed3": 224,
+          "report_extra": 241,
+          "boost_extra": 527,
+          "capacity4": 249,
+          "tariff4": 276,
+          "convoy": 300,
+          "speed4": 300,
+          "jam": 300,
+          "capacity5": 331,
+          "policehold": 331,
+          "hungry": 333,
+          "tariff5": 342,
+          "blackout": 360,
+          "speed5": 365,
+          "complete": 365,
+          "side": 374,
+          "coffee": 391,
+          "goal_town_2": 392,
+          "espresso1": 392,
+          "coffeePrice1": 393,
+          "cup1": 395,
+          "espresso2": 397,
+          "coffeePrice2": 398,
+          "storm": 420,
+          "barista1": 423,
+          "espresso3": 424,
+          "rival2": 429,
+          "coffeePrice3": 430,
+          "stage3": 430,
+          "depot": 450,
+          "dispatch": 451,
+          "vanSpeed1": 455,
+          "rescue": 461,
+          "vanBattery1": 467,
+          "vanSpeed2": 481,
+          "goal_town_3": 497,
+          "vans1": 497,
+          "callmissed": 502,
+          "vanBattery2": 511,
+          "vanSpeed3": 520,
+          "vans2": 546,
+          "vanBattery3": 573,
+          "dispatcher1": 615,
+          "policewarning": 620,
+          "vanSpeed4": 640,
+          "stage4": 640,
+          "rival3": 654,
+          "wash": 656,
+          "ready_highway": 657,
+          "washSpeed1": 657,
+          "washPopularity1": 658,
+          "washPrice1": 659
+        },
+        "errors": []
+      },
+      {
+        "seed": 3,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "serve",
+            11
+          ],
+          [
+            "idlefee",
+            14
+          ],
+          [
+            "car1",
+            21
+          ],
+          [
+            "bay2",
+            43
+          ],
+          [
+            "mission1",
+            55
+          ],
+          [
+            "combo3",
+            57
+          ],
+          [
+            "capacity1",
+            67
+          ],
+          [
+            "selfplug",
+            77
+          ],
+          [
+            "hungry",
+            83
+          ],
+          [
+            "bay3",
+            88
+          ],
+          [
+            "vipintro",
+            94
+          ],
+          [
+            "jam",
+            126
+          ],
+          [
+            "goal_town_0",
+            135
+          ],
+          [
+            "mission2",
+            142
+          ],
+          [
+            "goal_town_1",
+            147
+          ],
+          [
+            "tariff1",
+            147
+          ],
+          [
+            "policehold",
+            149
+          ],
+          [
+            "worker",
+            149
+          ],
+          [
+            "workerplug",
+            158
+          ],
+          [
+            "office",
+            169
+          ],
+          [
+            "report_extra",
+            172
+          ],
+          [
+            "rival1",
+            191
+          ],
+          [
+            "speed1",
+            191
+          ],
+          [
+            "mission3",
+            192
+          ],
+          [
+            "capacity2",
+            192
+          ],
+          [
+            "accounting",
+            194
+          ],
+          [
+            "boost_extra",
+            197
+          ],
+          [
+            "viptip",
+            219
+          ],
+          [
+            "tariff2",
+            229
+          ],
+          [
+            "bay4",
+            231
+          ],
+          [
+            "viptrail",
+            241
+          ],
+          [
+            "slack",
+            243
+          ],
+          [
+            "speed2",
+            243
+          ],
+          [
+            "wake",
+            243
+          ],
+          [
+            "mission4",
+            245
+          ],
+          [
+            "capacity3",
+            246
+          ],
+          [
+            "goal_town_5",
+            248
+          ],
+          [
+            "tariff3",
+            249
+          ],
+          [
+            "speed3",
+            251
+          ],
+          [
+            "mission5",
+            259
+          ],
+          [
+            "capacity4",
+            265
+          ],
+          [
+            "tariff4",
+            286
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "speed4",
+            301
+          ],
+          [
+            "capacity5",
+            313
+          ],
+          [
+            "boost_extra",
+            329
+          ],
+          [
+            "tariff5",
+            337
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "speed5",
+            367
+          ],
+          [
+            "complete",
+            367
+          ],
+          [
+            "side",
+            398
+          ],
+          [
+            "side",
+            412
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "coffee",
+            432
+          ],
+          [
+            "goal_town_2",
+            432
+          ],
+          [
+            "espresso1",
+            432
+          ],
+          [
+            "coffeePrice1",
+            434
+          ],
+          [
+            "espresso2",
+            435
+          ],
+          [
+            "cup1",
+            436
+          ],
+          [
+            "coffeePrice2",
+            437
+          ],
+          [
+            "boost_extra",
+            440
+          ],
+          [
+            "barista1",
+            442
+          ],
+          [
+            "rival2",
+            444
+          ],
+          [
+            "espresso3",
+            445
+          ],
+          [
+            "coffeePrice3",
+            449
+          ],
+          [
+            "stage3",
+            449
+          ],
+          [
+            "depot",
+            467
+          ],
+          [
+            "dispatch",
+            467
+          ],
+          [
+            "vanSpeed1",
+            473
+          ],
+          [
+            "vanBattery1",
+            475
+          ],
+          [
+            "rescue",
+            481
+          ],
+          [
+            "vanSpeed2",
+            496
+          ],
+          [
+            "vans1",
+            506
+          ],
+          [
+            "goal_town_3",
+            514
+          ],
+          [
+            "callmissed",
+            520
+          ],
+          [
+            "vanBattery2",
+            526
+          ],
+          [
+            "vanSpeed3",
+            555
+          ],
+          [
+            "boost_extra",
+            569
+          ],
+          [
+            "vans2",
+            586
+          ],
+          [
+            "vanBattery3",
+            605
+          ],
+          [
+            "dispatcher1",
+            625
+          ],
+          [
+            "mission6",
+            656
+          ],
+          [
+            "boost_extra",
+            665
+          ]
+        ],
+        "doneAt": 367,
+        "served": 99,
+        "earned": 6652,
+        "rating": 4.8,
+        "ratingEnd": 4.8,
+        "missions": 6,
+        "playSec": 667,
+        "mobile": {
+          "cash": 390,
+          "earned": 390,
+          "jobs": 17,
+          "missed": 1,
+          "rescued": 0
+        },
+        "jams": 4,
+        "fines": 0,
+        "lost": 0,
+        "cups": 29,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "serve": 11,
+          "idlefee": 14,
+          "car1": 21,
+          "bay2": 43,
+          "mission1": 55,
+          "combo3": 57,
+          "capacity1": 67,
+          "selfplug": 77,
+          "hungry": 83,
+          "bay3": 88,
+          "vipintro": 94,
+          "jam": 126,
+          "goal_town_0": 135,
+          "mission2": 142,
+          "goal_town_1": 147,
+          "tariff1": 147,
+          "policehold": 149,
+          "worker": 149,
+          "workerplug": 158,
+          "office": 169,
+          "report_extra": 172,
+          "rival1": 191,
+          "speed1": 191,
+          "mission3": 192,
+          "capacity2": 192,
+          "accounting": 194,
+          "boost_extra": 665,
+          "viptip": 219,
+          "tariff2": 229,
+          "bay4": 231,
+          "viptrail": 241,
+          "slack": 243,
+          "speed2": 243,
+          "wake": 243,
+          "mission4": 245,
+          "capacity3": 246,
+          "goal_town_5": 248,
+          "tariff3": 249,
+          "speed3": 251,
+          "mission5": 259,
+          "capacity4": 265,
+          "tariff4": 286,
+          "convoy": 300,
+          "speed4": 301,
+          "capacity5": 313,
+          "tariff5": 337,
+          "blackout": 360,
+          "speed5": 367,
+          "complete": 367,
+          "side": 412,
+          "storm": 420,
+          "coffee": 432,
+          "goal_town_2": 432,
+          "espresso1": 432,
+          "coffeePrice1": 434,
+          "espresso2": 435,
+          "cup1": 436,
+          "coffeePrice2": 437,
+          "barista1": 442,
+          "rival2": 444,
+          "espresso3": 445,
+          "coffeePrice3": 449,
+          "stage3": 449,
+          "depot": 467,
+          "dispatch": 467,
+          "vanSpeed1": 473,
+          "vanBattery1": 475,
+          "rescue": 481,
+          "vanSpeed2": 496,
+          "vans1": 506,
+          "goal_town_3": 514,
+          "callmissed": 520,
+          "vanBattery2": 526,
+          "vanSpeed3": 555,
+          "vans2": 586,
+          "vanBattery3": 605,
+          "dispatcher1": 625,
+          "mission6": 656
+        },
+        "errors": []
+      }
+    ]
+  },
+  "optimizer": {
+    "stat": {
+      "car1": {
+        "median": 18,
+        "p90": 18
+      },
+      "bay2": {
+        "median": 39,
+        "p90": 40
+      },
+      "bay3": {
+        "median": 61,
+        "p90": 79
+      },
+      "worker": {
+        "median": 119,
+        "p90": 123
+      },
+      "office": {
+        "median": 140,
+        "p90": 151
+      },
+      "accounting": {
+        "median": 161,
+        "p90": 178
+      },
+      "bay4": {
+        "median": 196,
+        "p90": 201
+      },
+      "complete": {
+        "median": 306,
+        "p90": 349
+      },
+      "coffee": {
+        "median": 357,
+        "p90": 389
+      },
+      "stage3": {
+        "median": 394,
+        "p90": 419
+      },
+      "depot": {
+        "median": 414,
+        "p90": 445
+      },
+      "stage4": {
+        "median": 558,
+        "p90": 614
+      },
+      "wash": {
+        "median": 597,
+        "p90": 643
+      },
+      "rating": 4.9,
+      "missions": 9,
+      "vanPerMin": 78,
+      "missedShare": 0.058823529411764705,
+      "fines": 0,
+      "jams": 4,
+      "cups": 36
+    },
+    "runs": [
+      {
+        "seed": 1,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "serve",
+            11
+          ],
+          [
+            "idlefee",
+            13
+          ],
+          [
+            "car1",
+            18
+          ],
+          [
+            "capacity1",
+            38
+          ],
+          [
+            "bay2",
+            39
+          ],
+          [
+            "mission1",
+            51
+          ],
+          [
+            "combo3",
+            51
+          ],
+          [
+            "bay3",
+            61
+          ],
+          [
+            "selfplug",
+            70
+          ],
+          [
+            "mission2",
+            87
+          ],
+          [
+            "goal_town_1",
+            90
+          ],
+          [
+            "vipintro",
+            93
+          ],
+          [
+            "hungry",
+            116
+          ],
+          [
+            "jam",
+            120
+          ],
+          [
+            "goal_town_0",
+            122
+          ],
+          [
+            "tariff1",
+            122
+          ],
+          [
+            "policehold",
+            123
+          ],
+          [
+            "worker",
+            123
+          ],
+          [
+            "workerplug",
+            131
+          ],
+          [
+            "mission3",
+            149
+          ],
+          [
+            "speed1",
+            149
+          ],
+          [
+            "office",
+            151
+          ],
+          [
+            "rival1",
+            176
+          ],
+          [
+            "capacity2",
+            176
+          ],
+          [
+            "accounting",
+            178
+          ],
+          [
+            "mission4",
+            190
+          ],
+          [
+            "viptip",
+            190
+          ],
+          [
+            "mission5",
+            190
+          ],
+          [
+            "tariff2",
+            190
+          ],
+          [
+            "slack",
+            196
+          ],
+          [
+            "speed2",
+            197
+          ],
+          [
+            "bay4",
+            201
+          ],
+          [
+            "report_speed",
+            209
+          ],
+          [
+            "wake",
+            211
+          ],
+          [
+            "capacity3",
+            213
+          ],
+          [
+            "viptrail",
+            214
+          ],
+          [
+            "report_extra",
+            216
+          ],
+          [
+            "boost_extra",
+            221
+          ],
+          [
+            "goal_town_5",
+            228
+          ],
+          [
+            "tariff3",
+            228
+          ],
+          [
+            "speed3",
+            228
+          ],
+          [
+            "capacity4",
+            236
+          ],
+          [
+            "tariff4",
+            253
+          ],
+          [
+            "speed4",
+            268
+          ],
+          [
+            "mission6",
+            287
+          ],
+          [
+            "capacity5",
+            287
+          ],
+          [
+            "tariff5",
+            295
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "speed5",
+            305
+          ],
+          [
+            "complete",
+            305
+          ],
+          [
+            "boost_extra",
+            312
+          ],
+          [
+            "side",
+            320
+          ],
+          [
+            "side",
+            344
+          ],
+          [
+            "coffee",
+            357
+          ],
+          [
+            "goal_town_2",
+            358
+          ],
+          [
+            "espresso1",
+            358
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "coffeePrice1",
+            362
+          ],
+          [
+            "espresso2",
+            362
+          ],
+          [
+            "cup1",
+            363
+          ],
+          [
+            "coffeePrice2",
+            365
+          ],
+          [
+            "mission7",
+            370
+          ],
+          [
+            "barista1",
+            370
+          ],
+          [
+            "espresso3",
+            372
+          ],
+          [
+            "coffeePrice3",
+            394
+          ],
+          [
+            "stage3",
+            394
+          ],
+          [
+            "depot",
+            414
+          ],
+          [
+            "dispatch",
+            414
+          ],
+          [
+            "rival2",
+            416
+          ],
+          [
+            "vanSpeed1",
+            417
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "vanBattery1",
+            421
+          ],
+          [
+            "rescue",
+            422
+          ],
+          [
+            "boost_extra",
+            429
+          ],
+          [
+            "mission8",
+            434
+          ],
+          [
+            "vanSpeed2",
+            437
+          ],
+          [
+            "vans1",
+            455
+          ],
+          [
+            "goal_town_3",
+            465
+          ],
+          [
+            "vanBattery2",
+            465
+          ],
+          [
+            "callmissed",
+            474
+          ],
+          [
+            "vanSpeed3",
+            480
+          ],
+          [
+            "mission9",
+            494
+          ],
+          [
+            "vans2",
+            512
+          ],
+          [
+            "vanBattery3",
+            517
+          ],
+          [
+            "boost_extra",
+            540
+          ],
+          [
+            "dispatcher1",
+            544
+          ],
+          [
+            "vanSpeed4",
+            558
+          ],
+          [
+            "stage4",
+            558
+          ],
+          [
+            "wash",
+            597
+          ],
+          [
+            "ready_highway",
+            598
+          ],
+          [
+            "washSpeed1",
+            601
+          ]
+        ],
+        "doneAt": 305,
+        "served": 93,
+        "earned": 6687,
+        "rating": 4.9,
+        "ratingEnd": 4.8,
+        "missions": 9,
+        "playSec": 605,
+        "mobile": {
+          "cash": 147,
+          "earned": 389,
+          "jobs": 16,
+          "missed": 1,
+          "rescued": 0
+        },
+        "jams": 4,
+        "fines": 0,
+        "lost": 0,
+        "cups": 36,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "serve": 11,
+          "idlefee": 13,
+          "car1": 18,
+          "capacity1": 38,
+          "bay2": 39,
+          "mission1": 51,
+          "combo3": 51,
+          "bay3": 61,
+          "selfplug": 70,
+          "mission2": 87,
+          "goal_town_1": 90,
+          "vipintro": 93,
+          "hungry": 116,
+          "jam": 120,
+          "goal_town_0": 122,
+          "tariff1": 122,
+          "policehold": 123,
+          "worker": 123,
+          "workerplug": 131,
+          "mission3": 149,
+          "speed1": 149,
+          "office": 151,
+          "rival1": 176,
+          "capacity2": 176,
+          "accounting": 178,
+          "mission4": 190,
+          "viptip": 190,
+          "mission5": 190,
+          "tariff2": 190,
+          "slack": 196,
+          "speed2": 197,
+          "bay4": 201,
+          "report_speed": 209,
+          "wake": 211,
+          "capacity3": 213,
+          "viptrail": 214,
+          "report_extra": 216,
+          "boost_extra": 540,
+          "goal_town_5": 228,
+          "tariff3": 228,
+          "speed3": 228,
+          "capacity4": 236,
+          "tariff4": 253,
+          "speed4": 268,
+          "mission6": 287,
+          "capacity5": 287,
+          "tariff5": 295,
+          "convoy": 300,
+          "speed5": 305,
+          "complete": 305,
+          "side": 344,
+          "coffee": 357,
+          "goal_town_2": 358,
+          "espresso1": 358,
+          "blackout": 360,
+          "coffeePrice1": 362,
+          "espresso2": 362,
+          "cup1": 363,
+          "coffeePrice2": 365,
+          "mission7": 370,
+          "barista1": 370,
+          "espresso3": 372,
+          "coffeePrice3": 394,
+          "stage3": 394,
+          "depot": 414,
+          "dispatch": 414,
+          "rival2": 416,
+          "vanSpeed1": 417,
+          "storm": 420,
+          "vanBattery1": 421,
+          "rescue": 422,
+          "mission8": 434,
+          "vanSpeed2": 437,
+          "vans1": 455,
+          "goal_town_3": 465,
+          "vanBattery2": 465,
+          "callmissed": 474,
+          "vanSpeed3": 480,
+          "mission9": 494,
+          "vans2": 512,
+          "vanBattery3": 517,
+          "dispatcher1": 544,
+          "vanSpeed4": 558,
+          "stage4": 558,
+          "wash": 597,
+          "ready_highway": 598,
+          "washSpeed1": 601
+        },
+        "errors": []
+      },
+      {
+        "seed": 2,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "serve",
+            11
+          ],
+          [
+            "idlefee",
+            13
+          ],
+          [
+            "car1",
+            18
+          ],
+          [
+            "capacity1",
+            38
+          ],
+          [
+            "bay2",
+            40
+          ],
+          [
+            "mission1",
+            51
+          ],
+          [
+            "combo3",
+            52
+          ],
+          [
+            "bay3",
+            61
+          ],
+          [
+            "selfplug",
+            71
+          ],
+          [
+            "mission2",
+            90
+          ],
+          [
+            "goal_town_1",
+            92
+          ],
+          [
+            "vipintro",
+            93
+          ],
+          [
+            "worker",
+            108
+          ],
+          [
+            "viptip",
+            112
+          ],
+          [
+            "hungry",
+            116
+          ],
+          [
+            "goal_town_0",
+            120
+          ],
+          [
+            "viptrail",
+            120
+          ],
+          [
+            "workerplug",
+            130
+          ],
+          [
+            "office",
+            134
+          ],
+          [
+            "mission3",
+            149
+          ],
+          [
+            "accounting",
+            151
+          ],
+          [
+            "rival1",
+            178
+          ],
+          [
+            "bay4",
+            179
+          ],
+          [
+            "tariff1",
+            182
+          ],
+          [
+            "mission4",
+            193
+          ],
+          [
+            "mission5",
+            193
+          ],
+          [
+            "speed1",
+            194
+          ],
+          [
+            "capacity2",
+            194
+          ],
+          [
+            "tariff2",
+            197
+          ],
+          [
+            "slack",
+            204
+          ],
+          [
+            "wake",
+            205
+          ],
+          [
+            "speed2",
+            207
+          ],
+          [
+            "capacity3",
+            210
+          ],
+          [
+            "report_extra",
+            232
+          ],
+          [
+            "tariff3",
+            233
+          ],
+          [
+            "goal_town_5",
+            233
+          ],
+          [
+            "speed3",
+            233
+          ],
+          [
+            "boost_extra",
+            234
+          ],
+          [
+            "capacity4",
+            241
+          ],
+          [
+            "tariff4",
+            258
+          ],
+          [
+            "speed4",
+            288
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "jam",
+            300
+          ],
+          [
+            "capacity5",
+            306
+          ],
+          [
+            "policehold",
+            306
+          ],
+          [
+            "boost_extra",
+            326
+          ],
+          [
+            "tariff5",
+            330
+          ],
+          [
+            "speed5",
+            349
+          ],
+          [
+            "complete",
+            349
+          ],
+          [
+            "side",
+            354
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "side",
+            379
+          ],
+          [
+            "coffee",
+            389
+          ],
+          [
+            "goal_town_2",
+            389
+          ],
+          [
+            "espresso1",
+            389
+          ],
+          [
+            "coffeePrice1",
+            390
+          ],
+          [
+            "espresso2",
+            390
+          ],
+          [
+            "cup1",
+            393
+          ],
+          [
+            "coffeePrice2",
+            394
+          ],
+          [
+            "barista1",
+            401
+          ],
+          [
+            "espresso3",
+            405
+          ],
+          [
+            "coffeePrice3",
+            419
+          ],
+          [
+            "stage3",
+            419
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "boost_extra",
+            431
+          ],
+          [
+            "rival2",
+            441
+          ],
+          [
+            "depot",
+            445
+          ],
+          [
+            "dispatch",
+            445
+          ],
+          [
+            "vanSpeed1",
+            448
+          ],
+          [
+            "rescue",
+            454
+          ],
+          [
+            "vanBattery1",
+            454
+          ],
+          [
+            "vanSpeed2",
+            466
+          ],
+          [
+            "vans1",
+            469
+          ],
+          [
+            "goal_town_3",
+            483
+          ],
+          [
+            "vanBattery2",
+            483
+          ],
+          [
+            "mission6",
+            484
+          ],
+          [
+            "vanSpeed3",
+            502
+          ],
+          [
+            "boost_extra",
+            522
+          ],
+          [
+            "vans2",
+            529
+          ],
+          [
+            "vanBattery3",
+            557
+          ],
+          [
+            "mission7",
+            573
+          ],
+          [
+            "dispatcher1",
+            583
+          ],
+          [
+            "mission8",
+            608
+          ],
+          [
+            "vanSpeed4",
+            614
+          ],
+          [
+            "stage4",
+            614
+          ],
+          [
+            "wash",
+            643
+          ],
+          [
+            "ready_highway",
+            643
+          ]
+        ],
+        "doneAt": 349,
+        "served": 101,
+        "earned": 6697,
+        "rating": 4.3,
+        "ratingEnd": 4.8,
+        "missions": 8,
+        "playSec": 649,
+        "mobile": {
+          "cash": 367,
+          "earned": 431,
+          "jobs": 18,
+          "missed": 0,
+          "rescued": 0
+        },
+        "jams": 5,
+        "fines": 0,
+        "lost": 0,
+        "cups": 36,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "serve": 11,
+          "idlefee": 13,
+          "car1": 18,
+          "capacity1": 38,
+          "bay2": 40,
+          "mission1": 51,
+          "combo3": 52,
+          "bay3": 61,
+          "selfplug": 71,
+          "mission2": 90,
+          "goal_town_1": 92,
+          "vipintro": 93,
+          "worker": 108,
+          "viptip": 112,
+          "hungry": 116,
+          "goal_town_0": 120,
+          "viptrail": 120,
+          "workerplug": 130,
+          "office": 134,
+          "mission3": 149,
+          "accounting": 151,
+          "rival1": 178,
+          "bay4": 179,
+          "tariff1": 182,
+          "mission4": 193,
+          "mission5": 193,
+          "speed1": 194,
+          "capacity2": 194,
+          "tariff2": 197,
+          "slack": 204,
+          "wake": 205,
+          "speed2": 207,
+          "capacity3": 210,
+          "report_extra": 232,
+          "tariff3": 233,
+          "goal_town_5": 233,
+          "speed3": 233,
+          "boost_extra": 522,
+          "capacity4": 241,
+          "tariff4": 258,
+          "speed4": 288,
+          "convoy": 300,
+          "jam": 300,
+          "capacity5": 306,
+          "policehold": 306,
+          "tariff5": 330,
+          "speed5": 349,
+          "complete": 349,
+          "side": 379,
+          "blackout": 360,
+          "coffee": 389,
+          "goal_town_2": 389,
+          "espresso1": 389,
+          "coffeePrice1": 390,
+          "espresso2": 390,
+          "cup1": 393,
+          "coffeePrice2": 394,
+          "barista1": 401,
+          "espresso3": 405,
+          "coffeePrice3": 419,
+          "stage3": 419,
+          "storm": 420,
+          "rival2": 441,
+          "depot": 445,
+          "dispatch": 445,
+          "vanSpeed1": 448,
+          "rescue": 454,
+          "vanBattery1": 454,
+          "vanSpeed2": 466,
+          "vans1": 469,
+          "goal_town_3": 483,
+          "vanBattery2": 483,
+          "mission6": 484,
+          "vanSpeed3": 502,
+          "vans2": 529,
+          "vanBattery3": 557,
+          "mission7": 573,
+          "dispatcher1": 583,
+          "mission8": 608,
+          "vanSpeed4": 614,
+          "stage4": 614,
+          "wash": 643,
+          "ready_highway": 643
+        },
+        "errors": []
+      },
+      {
+        "seed": 3,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "serve",
+            11
+          ],
+          [
+            "idlefee",
+            13
+          ],
+          [
+            "car1",
+            18
+          ],
+          [
+            "capacity1",
+            38
+          ],
+          [
+            "bay2",
+            39
+          ],
+          [
+            "mission1",
+            51
+          ],
+          [
+            "combo3",
+            51
+          ],
+          [
+            "bay3",
+            79
+          ],
+          [
+            "hungry",
+            82
+          ],
+          [
+            "selfplug",
+            85
+          ],
+          [
+            "goal_town_1",
+            97
+          ],
+          [
+            "mission2",
+            105
+          ],
+          [
+            "vipintro",
+            107
+          ],
+          [
+            "goal_town_0",
+            117
+          ],
+          [
+            "worker",
+            119
+          ],
+          [
+            "workerplug",
+            124
+          ],
+          [
+            "viptip",
+            126
+          ],
+          [
+            "office",
+            140
+          ],
+          [
+            "viptrail",
+            144
+          ],
+          [
+            "accounting",
+            161
+          ],
+          [
+            "mission3",
+            164
+          ],
+          [
+            "rival1",
+            164
+          ],
+          [
+            "tariff1",
+            176
+          ],
+          [
+            "bay4",
+            196
+          ],
+          [
+            "speed1",
+            199
+          ],
+          [
+            "capacity2",
+            200
+          ],
+          [
+            "tariff2",
+            204
+          ],
+          [
+            "mission4",
+            209
+          ],
+          [
+            "speed2",
+            210
+          ],
+          [
+            "capacity3",
+            210
+          ],
+          [
+            "slack",
+            211
+          ],
+          [
+            "wake",
+            212
+          ],
+          [
+            "goal_town_5",
+            220
+          ],
+          [
+            "tariff3",
+            220
+          ],
+          [
+            "speed3",
+            222
+          ],
+          [
+            "capacity4",
+            238
+          ],
+          [
+            "tariff4",
+            242
+          ],
+          [
+            "speed4",
+            256
+          ],
+          [
+            "capacity5",
+            264
+          ],
+          [
+            "tariff5",
+            280
+          ],
+          [
+            "mission5",
+            294
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "jam",
+            300
+          ],
+          [
+            "policehold",
+            303
+          ],
+          [
+            "boost_extra",
+            303
+          ],
+          [
+            "report_extra",
+            303
+          ],
+          [
+            "speed5",
+            306
+          ],
+          [
+            "complete",
+            306
+          ],
+          [
+            "side",
+            312
+          ],
+          [
+            "side",
+            329
+          ],
+          [
+            "coffee",
+            333
+          ],
+          [
+            "goal_town_2",
+            333
+          ],
+          [
+            "espresso1",
+            333
+          ],
+          [
+            "coffeePrice1",
+            334
+          ],
+          [
+            "espresso2",
+            335
+          ],
+          [
+            "cup1",
+            338
+          ],
+          [
+            "coffeePrice2",
+            343
+          ],
+          [
+            "barista1",
+            347
+          ],
+          [
+            "espresso3",
+            360
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "coffeePrice3",
+            371
+          ],
+          [
+            "stage3",
+            371
+          ],
+          [
+            "mission6",
+            394
+          ],
+          [
+            "depot",
+            398
+          ],
+          [
+            "dispatch",
+            399
+          ],
+          [
+            "vanSpeed1",
+            412
+          ],
+          [
+            "vanBattery1",
+            415
+          ],
+          [
+            "rescue",
+            416
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "rival2",
+            426
+          ],
+          [
+            "vanSpeed2",
+            426
+          ],
+          [
+            "boost_extra",
+            436
+          ],
+          [
+            "callmissed",
+            438
+          ],
+          [
+            "vans1",
+            444
+          ],
+          [
+            "goal_town_3",
+            455
+          ],
+          [
+            "vanBattery2",
+            455
+          ],
+          [
+            "vanSpeed3",
+            477
+          ],
+          [
+            "mission7",
+            486
+          ],
+          [
+            "vans2",
+            493
+          ],
+          [
+            "vanBattery3",
+            511
+          ],
+          [
+            "mission8",
+            522
+          ],
+          [
+            "dispatcher1",
+            535
+          ],
+          [
+            "vanSpeed4",
+            555
+          ],
+          [
+            "stage4",
+            555
+          ],
+          [
+            "mission9",
+            585
+          ],
+          [
+            "wash",
+            585
+          ],
+          [
+            "ready_highway",
+            586
+          ],
+          [
+            "washSpeed1",
+            593
+          ],
+          [
+            "washPopularity1",
+            602
+          ],
+          [
+            "wash1",
+            602
+          ]
+        ],
+        "doneAt": 306,
+        "served": 94,
+        "earned": 6696,
+        "rating": 4.9,
+        "ratingEnd": 4.8,
+        "missions": 9,
+        "playSec": 606,
+        "mobile": {
+          "cash": 98,
+          "earned": 380,
+          "jobs": 16,
+          "missed": 2,
+          "rescued": 0
+        },
+        "jams": 2,
+        "fines": 0,
+        "lost": 0,
+        "cups": 32,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "serve": 11,
+          "idlefee": 13,
+          "car1": 18,
+          "capacity1": 38,
+          "bay2": 39,
+          "mission1": 51,
+          "combo3": 51,
+          "bay3": 79,
+          "hungry": 82,
+          "selfplug": 85,
+          "goal_town_1": 97,
+          "mission2": 105,
+          "vipintro": 107,
+          "goal_town_0": 117,
+          "worker": 119,
+          "workerplug": 124,
+          "viptip": 126,
+          "office": 140,
+          "viptrail": 144,
+          "accounting": 161,
+          "mission3": 164,
+          "rival1": 164,
+          "tariff1": 176,
+          "bay4": 196,
+          "speed1": 199,
+          "capacity2": 200,
+          "tariff2": 204,
+          "mission4": 209,
+          "speed2": 210,
+          "capacity3": 210,
+          "slack": 211,
+          "wake": 212,
+          "goal_town_5": 220,
+          "tariff3": 220,
+          "speed3": 222,
+          "capacity4": 238,
+          "tariff4": 242,
+          "speed4": 256,
+          "capacity5": 264,
+          "tariff5": 280,
+          "mission5": 294,
+          "convoy": 300,
+          "jam": 300,
+          "policehold": 303,
+          "boost_extra": 436,
+          "report_extra": 303,
+          "speed5": 306,
+          "complete": 306,
+          "side": 329,
+          "coffee": 333,
+          "goal_town_2": 333,
+          "espresso1": 333,
+          "coffeePrice1": 334,
+          "espresso2": 335,
+          "cup1": 338,
+          "coffeePrice2": 343,
+          "barista1": 347,
+          "espresso3": 360,
+          "blackout": 360,
+          "coffeePrice3": 371,
+          "stage3": 371,
+          "mission6": 394,
+          "depot": 398,
+          "dispatch": 399,
+          "vanSpeed1": 412,
+          "vanBattery1": 415,
+          "rescue": 416,
+          "storm": 420,
+          "rival2": 426,
+          "vanSpeed2": 426,
+          "callmissed": 438,
+          "vans1": 444,
+          "goal_town_3": 455,
+          "vanBattery2": 455,
+          "vanSpeed3": 477,
+          "mission7": 486,
+          "vans2": 493,
+          "vanBattery3": 511,
+          "mission8": 522,
+          "dispatcher1": 535,
+          "vanSpeed4": 555,
+          "stage4": 555,
+          "mission9": 585,
+          "wash": 585,
+          "ready_highway": 586,
+          "washSpeed1": 593,
+          "washPopularity1": 602,
+          "wash1": 602
+        },
+        "errors": []
+      }
+    ]
+  },
+  "distracted": {
+    "stat": {
+      "car1": {
+        "median": 26,
+        "p90": 29
+      },
+      "bay2": {
+        "median": 57,
+        "p90": 78
+      },
+      "bay3": {
+        "median": 104,
+        "p90": 174
+      },
+      "worker": {
+        "median": 196,
+        "p90": 225
+      },
+      "office": {
+        "median": 230,
+        "p90": 243
+      },
+      "accounting": {
+        "median": 267,
+        "p90": 269
+      },
+      "bay4": {
+        "median": 306,
+        "p90": 319
+      },
+      "complete": {
+        "median": 500,
+        "p90": 502
+      },
+      "coffee": {
+        "median": 546,
+        "p90": 576
+      },
+      "stage3": {
+        "median": 622,
+        "p90": 654
+      },
+      "depot": {
+        "median": 627,
+        "p90": 666
+      },
+      "stage4": {
+        "median": 796,
+        "p90": 796
+      },
+      "wash": {
+        "median": null,
+        "p90": null
+      },
+      "rating": 4.5,
+      "missions": 3,
+      "vanPerMin": 52,
+      "missedShare": 0.15384615384615385,
+      "fines": 0,
+      "jams": 10,
+      "cups": 30
+    },
+    "runs": [
+      {
+        "seed": 1,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "selfplug",
+            10
+          ],
+          [
+            "hungry",
+            26
+          ],
+          [
+            "car1",
+            29
+          ],
+          [
+            "plug",
+            39
+          ],
+          [
+            "serve",
+            48
+          ],
+          [
+            "idlefee",
+            48
+          ],
+          [
+            "bay2",
+            57
+          ],
+          [
+            "vipintro",
+            104
+          ],
+          [
+            "jam",
+            104
+          ],
+          [
+            "combo3",
+            105
+          ],
+          [
+            "capacity1",
+            150
+          ],
+          [
+            "policehold",
+            150
+          ],
+          [
+            "goal_town_0",
+            167
+          ],
+          [
+            "bay3",
+            174
+          ],
+          [
+            "queueleft",
+            193
+          ],
+          [
+            "mission1",
+            196
+          ],
+          [
+            "worker",
+            225
+          ],
+          [
+            "workerplug",
+            226
+          ],
+          [
+            "rival1",
+            227
+          ],
+          [
+            "goal_town_1",
+            236
+          ],
+          [
+            "office",
+            243
+          ],
+          [
+            "report_extra",
+            246
+          ],
+          [
+            "viptip",
+            255
+          ],
+          [
+            "viptrail",
+            264
+          ],
+          [
+            "accounting",
+            269
+          ],
+          [
+            "mission2",
+            272
+          ],
+          [
+            "policewarning",
+            293
+          ],
+          [
+            "convoy",
+            304
+          ],
+          [
+            "tariff1",
+            305
+          ],
+          [
+            "bay4",
+            306
+          ],
+          [
+            "goal_town_5",
+            316
+          ],
+          [
+            "slack",
+            317
+          ],
+          [
+            "wake",
+            324
+          ],
+          [
+            "speed1",
+            333
+          ],
+          [
+            "boost_extra",
+            335
+          ],
+          [
+            "mission3",
+            337
+          ],
+          [
+            "capacity2",
+            345
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "tariff2",
+            371
+          ],
+          [
+            "speed2",
+            375
+          ],
+          [
+            "capacity3",
+            385
+          ],
+          [
+            "tariff3",
+            389
+          ],
+          [
+            "speed3",
+            399
+          ],
+          [
+            "report_speed",
+            401
+          ],
+          [
+            "capacity4",
+            419
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "tariff4",
+            431
+          ],
+          [
+            "boost_extra",
+            431
+          ],
+          [
+            "speed4",
+            447
+          ],
+          [
+            "capacity5",
+            459
+          ],
+          [
+            "rival2",
+            472
+          ],
+          [
+            "tariff5",
+            484
+          ],
+          [
+            "speed5",
+            502
+          ],
+          [
+            "complete",
+            502
+          ],
+          [
+            "side",
+            541
+          ],
+          [
+            "side",
+            559
+          ],
+          [
+            "coffee",
+            576
+          ],
+          [
+            "goal_town_2",
+            576
+          ],
+          [
+            "cup1",
+            579
+          ],
+          [
+            "espresso1",
+            584
+          ],
+          [
+            "coffeePrice1",
+            594
+          ],
+          [
+            "espresso2",
+            598
+          ],
+          [
+            "coffeePrice2",
+            600
+          ],
+          [
+            "barista1",
+            602
+          ],
+          [
+            "espresso3",
+            604
+          ],
+          [
+            "coffeePrice3",
+            622
+          ],
+          [
+            "stage3",
+            622
+          ],
+          [
+            "depot",
+            627
+          ],
+          [
+            "dispatch",
+            628
+          ],
+          [
+            "vanSpeed1",
+            634
+          ],
+          [
+            "boost_extra",
+            636
+          ],
+          [
+            "rescue",
+            642
+          ],
+          [
+            "callmissed",
+            667
+          ],
+          [
+            "vanBattery1",
+            692
+          ],
+          [
+            "vanSpeed2",
+            698
+          ],
+          [
+            "vans1",
+            700
+          ],
+          [
+            "goal_town_3",
+            702
+          ],
+          [
+            "rival3",
+            706
+          ],
+          [
+            "vanBattery2",
+            708
+          ],
+          [
+            "vanSpeed3",
+            729
+          ],
+          [
+            "boost_extra",
+            729
+          ],
+          [
+            "vans2",
+            733
+          ],
+          [
+            "convoy",
+            734
+          ],
+          [
+            "vanBattery3",
+            747
+          ],
+          [
+            "dispatcher1",
+            775
+          ],
+          [
+            "fine1",
+            801
+          ],
+          [
+            "fine",
+            801
+          ]
+        ],
+        "doneAt": 502,
+        "served": 107,
+        "earned": 6111,
+        "rating": 5,
+        "ratingEnd": 4.4,
+        "missions": 3,
+        "playSec": 802,
+        "mobile": {
+          "cash": 274,
+          "earned": 274,
+          "jobs": 12,
+          "missed": 3,
+          "rescued": 1
+        },
+        "jams": 10,
+        "fines": 1,
+        "lost": 20,
+        "cups": 26,
+        "at": {
+          "rosaStart": 0,
+          "selfplug": 10,
+          "hungry": 26,
+          "car1": 29,
+          "plug": 39,
+          "serve": 48,
+          "idlefee": 48,
+          "bay2": 57,
+          "vipintro": 104,
+          "jam": 104,
+          "combo3": 105,
+          "capacity1": 150,
+          "policehold": 150,
+          "goal_town_0": 167,
+          "bay3": 174,
+          "queueleft": 193,
+          "mission1": 196,
+          "worker": 225,
+          "workerplug": 226,
+          "rival1": 227,
+          "goal_town_1": 236,
+          "office": 243,
+          "report_extra": 246,
+          "viptip": 255,
+          "viptrail": 264,
+          "accounting": 269,
+          "mission2": 272,
+          "policewarning": 293,
+          "convoy": 734,
+          "tariff1": 305,
+          "bay4": 306,
+          "goal_town_5": 316,
+          "slack": 317,
+          "wake": 324,
+          "speed1": 333,
+          "boost_extra": 729,
+          "mission3": 337,
+          "capacity2": 345,
+          "blackout": 360,
+          "tariff2": 371,
+          "speed2": 375,
+          "capacity3": 385,
+          "tariff3": 389,
+          "speed3": 399,
+          "report_speed": 401,
+          "capacity4": 419,
+          "storm": 420,
+          "tariff4": 431,
+          "speed4": 447,
+          "capacity5": 459,
+          "rival2": 472,
+          "tariff5": 484,
+          "speed5": 502,
+          "complete": 502,
+          "side": 559,
+          "coffee": 576,
+          "goal_town_2": 576,
+          "cup1": 579,
+          "espresso1": 584,
+          "coffeePrice1": 594,
+          "espresso2": 598,
+          "coffeePrice2": 600,
+          "barista1": 602,
+          "espresso3": 604,
+          "coffeePrice3": 622,
+          "stage3": 622,
+          "depot": 627,
+          "dispatch": 628,
+          "vanSpeed1": 634,
+          "rescue": 642,
+          "callmissed": 667,
+          "vanBattery1": 692,
+          "vanSpeed2": 698,
+          "vans1": 700,
+          "goal_town_3": 702,
+          "rival3": 706,
+          "vanBattery2": 708,
+          "vanSpeed3": 729,
+          "vans2": 733,
+          "vanBattery3": 747,
+          "dispatcher1": 775,
+          "fine1": 801,
+          "fine": 801
+        },
+        "errors": []
+      },
+      {
+        "seed": 2,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "serve",
+            41
+          ],
+          [
+            "idlefee",
+            42
+          ],
+          [
+            "bay2",
+            78
+          ],
+          [
+            "selfplug",
+            87
+          ],
+          [
+            "mission1",
+            90
+          ],
+          [
+            "combo3",
+            93
+          ],
+          [
+            "capacity1",
+            102
+          ],
+          [
+            "bay3",
+            104
+          ],
+          [
+            "vipintro",
+            118
+          ],
+          [
+            "jam",
+            145
+          ],
+          [
+            "goal_town_0",
+            155
+          ],
+          [
+            "policewarning",
+            180
+          ],
+          [
+            "rival1",
+            186
+          ],
+          [
+            "tariff1",
+            187
+          ],
+          [
+            "speed1",
+            189
+          ],
+          [
+            "worker",
+            189
+          ],
+          [
+            "workerplug",
+            191
+          ],
+          [
+            "goal_town_1",
+            199
+          ],
+          [
+            "mission2",
+            211
+          ],
+          [
+            "office",
+            213
+          ],
+          [
+            "viptip",
+            252
+          ],
+          [
+            "accounting",
+            267
+          ],
+          [
+            "mission3",
+            271
+          ],
+          [
+            "goal_town_5",
+            280
+          ],
+          [
+            "slack",
+            285
+          ],
+          [
+            "capacity2",
+            285
+          ],
+          [
+            "report_extra",
+            295
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "policehold",
+            303
+          ],
+          [
+            "bay4",
+            303
+          ],
+          [
+            "tariff2",
+            323
+          ],
+          [
+            "speed2",
+            325
+          ],
+          [
+            "capacity3",
+            327
+          ],
+          [
+            "tariff3",
+            337
+          ],
+          [
+            "boost_extra",
+            337
+          ],
+          [
+            "speed3",
+            347
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "capacity4",
+            363
+          ],
+          [
+            "tariff4",
+            385
+          ],
+          [
+            "speed4",
+            399
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "boost_extra",
+            431
+          ],
+          [
+            "capacity5",
+            435
+          ],
+          [
+            "viptrail",
+            441
+          ],
+          [
+            "tariff5",
+            451
+          ],
+          [
+            "rival2",
+            453
+          ],
+          [
+            "speed5",
+            457
+          ],
+          [
+            "complete",
+            457
+          ],
+          [
+            "side",
+            483
+          ],
+          [
+            "wake",
+            497
+          ],
+          [
+            "side",
+            501
+          ],
+          [
+            "coffee",
+            518
+          ],
+          [
+            "goal_town_2",
+            519
+          ],
+          [
+            "fine1",
+            521
+          ],
+          [
+            "fine",
+            521
+          ],
+          [
+            "cup1",
+            521
+          ],
+          [
+            "espresso1",
+            534
+          ],
+          [
+            "coffeePrice1",
+            556
+          ],
+          [
+            "espresso2",
+            594
+          ],
+          [
+            "coffeePrice2",
+            596
+          ],
+          [
+            "barista1",
+            598
+          ],
+          [
+            "espresso3",
+            604
+          ],
+          [
+            "coffeePrice3",
+            612
+          ],
+          [
+            "boost_extra",
+            612
+          ],
+          [
+            "stage3",
+            612
+          ],
+          [
+            "depot",
+            614
+          ],
+          [
+            "dispatch",
+            616
+          ],
+          [
+            "vanSpeed1",
+            626
+          ],
+          [
+            "rescue",
+            628
+          ],
+          [
+            "vanBattery1",
+            630
+          ],
+          [
+            "vanSpeed2",
+            640
+          ],
+          [
+            "callmissed",
+            666
+          ],
+          [
+            "vans1",
+            668
+          ],
+          [
+            "goal_town_3",
+            674
+          ],
+          [
+            "vanBattery2",
+            678
+          ],
+          [
+            "vanSpeed3",
+            700
+          ],
+          [
+            "vans2",
+            712
+          ],
+          [
+            "mission4",
+            714
+          ],
+          [
+            "boost_extra",
+            718
+          ],
+          [
+            "rival3",
+            721
+          ],
+          [
+            "vanBattery3",
+            722
+          ]
+        ],
+        "doneAt": 457,
+        "served": 104,
+        "earned": 5870,
+        "rating": 3.9,
+        "ratingEnd": 5,
+        "missions": 4,
+        "playSec": 757,
+        "mobile": {
+          "cash": 121,
+          "earned": 260,
+          "jobs": 11,
+          "missed": 2,
+          "rescued": 0
+        },
+        "jams": 3,
+        "fines": 1,
+        "lost": 23,
+        "cups": 30,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "serve": 41,
+          "idlefee": 42,
+          "bay2": 78,
+          "selfplug": 87,
+          "mission1": 90,
+          "combo3": 93,
+          "capacity1": 102,
+          "bay3": 104,
+          "vipintro": 118,
+          "jam": 145,
+          "goal_town_0": 155,
+          "policewarning": 180,
+          "rival1": 186,
+          "tariff1": 187,
+          "speed1": 189,
+          "worker": 189,
+          "workerplug": 191,
+          "goal_town_1": 199,
+          "mission2": 211,
+          "office": 213,
+          "viptip": 252,
+          "accounting": 267,
+          "mission3": 271,
+          "goal_town_5": 280,
+          "slack": 285,
+          "capacity2": 285,
+          "report_extra": 295,
+          "convoy": 300,
+          "policehold": 303,
+          "bay4": 303,
+          "tariff2": 323,
+          "speed2": 325,
+          "capacity3": 327,
+          "tariff3": 337,
+          "boost_extra": 718,
+          "speed3": 347,
+          "blackout": 360,
+          "capacity4": 363,
+          "tariff4": 385,
+          "speed4": 399,
+          "storm": 420,
+          "capacity5": 435,
+          "viptrail": 441,
+          "tariff5": 451,
+          "rival2": 453,
+          "speed5": 457,
+          "complete": 457,
+          "side": 501,
+          "wake": 497,
+          "coffee": 518,
+          "goal_town_2": 519,
+          "fine1": 521,
+          "fine": 521,
+          "cup1": 521,
+          "espresso1": 534,
+          "coffeePrice1": 556,
+          "espresso2": 594,
+          "coffeePrice2": 596,
+          "barista1": 598,
+          "espresso3": 604,
+          "coffeePrice3": 612,
+          "stage3": 612,
+          "depot": 614,
+          "dispatch": 616,
+          "vanSpeed1": 626,
+          "rescue": 628,
+          "vanBattery1": 630,
+          "vanSpeed2": 640,
+          "callmissed": 666,
+          "vans1": 668,
+          "goal_town_3": 674,
+          "vanBattery2": 678,
+          "vanSpeed3": 700,
+          "vans2": 712,
+          "mission4": 714,
+          "rival3": 721,
+          "vanBattery3": 722
+        },
+        "errors": []
+      },
+      {
+        "seed": 3,
+        "log": [
+          [
+            "rosaStart",
+            0
+          ],
+          [
+            "plug",
+            6
+          ],
+          [
+            "hungry",
+            22
+          ],
+          [
+            "car1",
+            26
+          ],
+          [
+            "serve",
+            46
+          ],
+          [
+            "idlefee",
+            46
+          ],
+          [
+            "bay2",
+            55
+          ],
+          [
+            "combo3",
+            71
+          ],
+          [
+            "selfplug",
+            85
+          ],
+          [
+            "mission1",
+            93
+          ],
+          [
+            "bay3",
+            104
+          ],
+          [
+            "vipintro",
+            115
+          ],
+          [
+            "jam",
+            123
+          ],
+          [
+            "goal_town_0",
+            156
+          ],
+          [
+            "policewarning",
+            159
+          ],
+          [
+            "rival1",
+            194
+          ],
+          [
+            "capacity1",
+            195
+          ],
+          [
+            "policehold",
+            195
+          ],
+          [
+            "worker",
+            196
+          ],
+          [
+            "mission2",
+            199
+          ],
+          [
+            "workerplug",
+            204
+          ],
+          [
+            "goal_town_1",
+            225
+          ],
+          [
+            "tariff1",
+            227
+          ],
+          [
+            "office",
+            230
+          ],
+          [
+            "report_extra",
+            233
+          ],
+          [
+            "viptip",
+            244
+          ],
+          [
+            "mission3",
+            252
+          ],
+          [
+            "speed1",
+            259
+          ],
+          [
+            "accounting",
+            262
+          ],
+          [
+            "slack",
+            270
+          ],
+          [
+            "wake",
+            272
+          ],
+          [
+            "viptrail",
+            272
+          ],
+          [
+            "goal_town_5",
+            273
+          ],
+          [
+            "capacity2",
+            283
+          ],
+          [
+            "tariff2",
+            291
+          ],
+          [
+            "convoy",
+            300
+          ],
+          [
+            "speed2",
+            301
+          ],
+          [
+            "bay4",
+            319
+          ],
+          [
+            "capacity3",
+            327
+          ],
+          [
+            "boost_extra",
+            335
+          ],
+          [
+            "blackout",
+            360
+          ],
+          [
+            "tariff3",
+            365
+          ],
+          [
+            "speed3",
+            375
+          ],
+          [
+            "capacity4",
+            415
+          ],
+          [
+            "storm",
+            420
+          ],
+          [
+            "tariff4",
+            429
+          ],
+          [
+            "boost_extra",
+            449
+          ],
+          [
+            "speed4",
+            458
+          ],
+          [
+            "capacity5",
+            468
+          ],
+          [
+            "rival2",
+            483
+          ],
+          [
+            "tariff5",
+            490
+          ],
+          [
+            "speed5",
+            500
+          ],
+          [
+            "complete",
+            500
+          ],
+          [
+            "side",
+            513
+          ],
+          [
+            "side",
+            540
+          ],
+          [
+            "coffee",
+            546
+          ],
+          [
+            "goal_town_2",
+            546
+          ],
+          [
+            "cup1",
+            556
+          ],
+          [
+            "espresso1",
+            556
+          ],
+          [
+            "coffeePrice1",
+            576
+          ],
+          [
+            "espresso2",
+            586
+          ],
+          [
+            "coffeePrice2",
+            588
+          ],
+          [
+            "barista1",
+            614
+          ],
+          [
+            "espresso3",
+            624
+          ],
+          [
+            "coffeePrice3",
+            654
+          ],
+          [
+            "stage3",
+            654
+          ],
+          [
+            "depot",
+            666
+          ],
+          [
+            "dispatch",
+            666
+          ],
+          [
+            "vanSpeed1",
+            668
+          ],
+          [
+            "vanBattery1",
+            672
+          ],
+          [
+            "vanSpeed2",
+            674
+          ],
+          [
+            "fine1",
+            674
+          ],
+          [
+            "fine",
+            674
+          ],
+          [
+            "vans1",
+            676
+          ],
+          [
+            "vanBattery2",
+            680
+          ],
+          [
+            "rescue",
+            681
+          ],
+          [
+            "goal_town_3",
+            706
+          ],
+          [
+            "vanSpeed3",
+            706
+          ],
+          [
+            "boost_extra",
+            708
+          ],
+          [
+            "rival3",
+            715
+          ],
+          [
+            "vans2",
+            716
+          ],
+          [
+            "vanBattery3",
+            724
+          ],
+          [
+            "convoy",
+            724
+          ],
+          [
+            "dispatcher1",
+            752
+          ],
+          [
+            "report_speed",
+            773
+          ],
+          [
+            "vanSpeed4",
+            796
+          ],
+          [
+            "stage4",
+            796
+          ]
+        ],
+        "doneAt": 500,
+        "served": 109,
+        "earned": 6094,
+        "rating": 4.5,
+        "ratingEnd": 4.5,
+        "missions": 3,
+        "playSec": 800,
+        "mobile": {
+          "cash": 262,
+          "earned": 262,
+          "jobs": 11,
+          "missed": 0,
+          "rescued": 1
+        },
+        "jams": 12,
+        "fines": 1,
+        "lost": 14,
+        "cups": 34,
+        "at": {
+          "rosaStart": 0,
+          "plug": 6,
+          "hungry": 22,
+          "car1": 26,
+          "serve": 46,
+          "idlefee": 46,
+          "bay2": 55,
+          "combo3": 71,
+          "selfplug": 85,
+          "mission1": 93,
+          "bay3": 104,
+          "vipintro": 115,
+          "jam": 123,
+          "goal_town_0": 156,
+          "policewarning": 159,
+          "rival1": 194,
+          "capacity1": 195,
+          "policehold": 195,
+          "worker": 196,
+          "mission2": 199,
+          "workerplug": 204,
+          "goal_town_1": 225,
+          "tariff1": 227,
+          "office": 230,
+          "report_extra": 233,
+          "viptip": 244,
+          "mission3": 252,
+          "speed1": 259,
+          "accounting": 262,
+          "slack": 270,
+          "wake": 272,
+          "viptrail": 272,
+          "goal_town_5": 273,
+          "capacity2": 283,
+          "tariff2": 291,
+          "convoy": 724,
+          "speed2": 301,
+          "bay4": 319,
+          "capacity3": 327,
+          "boost_extra": 708,
+          "blackout": 360,
+          "tariff3": 365,
+          "speed3": 375,
+          "capacity4": 415,
+          "storm": 420,
+          "tariff4": 429,
+          "speed4": 458,
+          "capacity5": 468,
+          "rival2": 483,
+          "tariff5": 490,
+          "speed5": 500,
+          "complete": 500,
+          "side": 540,
+          "coffee": 546,
+          "goal_town_2": 546,
+          "cup1": 556,
+          "espresso1": 556,
+          "coffeePrice1": 576,
+          "espresso2": 586,
+          "coffeePrice2": 588,
+          "barista1": 614,
+          "espresso3": 624,
+          "coffeePrice3": 654,
+          "stage3": 654,
+          "depot": 666,
+          "dispatch": 666,
+          "vanSpeed1": 668,
+          "vanBattery1": 672,
+          "vanSpeed2": 674,
+          "fine1": 674,
+          "fine": 674,
+          "vans1": 676,
+          "vanBattery2": 680,
+          "rescue": 681,
+          "goal_town_3": 706,
+          "vanSpeed3": 706,
+          "rival3": 715,
+          "vans2": 716,
+          "vanBattery3": 724,
+          "dispatcher1": 752,
+          "report_speed": 773,
+          "vanSpeed4": 796,
+          "stage4": 796
+        },
+        "errors": []
+      }
+    ]
+  }
+}

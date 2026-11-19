@@ -1,0 +1,3167 @@
+{
+  "targets": {
+    "car1": 10,
+    "bay2": 50,
+    "bay3": 120,
+    "worker": 195,
+    "bay4": 240,
+    "complete": 420
+  },
+  "best": "save-cheapest",
+  "results": [
+    {
+      "strategy": "save-cheapest",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "capacity1",
+          134
+        ],
+        [
+          "tariff1",
+          144
+        ],
+        [
+          "speed1",
+          154
+        ],
+        [
+          "capacity2",
+          162
+        ],
+        [
+          "tariff2",
+          174
+        ],
+        [
+          "speed2",
+          180
+        ],
+        [
+          "capacity3",
+          191
+        ],
+        [
+          "tariff3",
+          207
+        ],
+        [
+          "speed3",
+          225
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "capacity4",
+          241
+        ],
+        [
+          "tariff4",
+          253
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "speed4",
+          271
+        ],
+        [
+          "capacity5",
+          290
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          317
+        ],
+        [
+          "speed5",
+          345
+        ],
+        [
+          "complete",
+          345
+        ]
+      ],
+      "doneAt": 345,
+      "served": 67,
+      "earned": 1872,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 345,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "capacity1": 134,
+        "tariff1": 144,
+        "speed1": 154,
+        "capacity2": 162,
+        "tariff2": 174,
+        "speed2": 180,
+        "capacity3": 191,
+        "tariff3": 207,
+        "speed3": 225,
+        "mission6": 241,
+        "capacity4": 241,
+        "tariff4": 253,
+        "mission7": 270,
+        "speed4": 271,
+        "capacity5": 290,
+        "mission8": 309,
+        "tariff5": 317,
+        "speed5": 345,
+        "complete": 345
+      }
+    },
+    {
+      "strategy": "save-tariff>capacity>speed",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "tariff1",
+          134
+        ],
+        [
+          "capacity1",
+          144
+        ],
+        [
+          "tariff2",
+          154
+        ],
+        [
+          "speed1",
+          162
+        ],
+        [
+          "capacity2",
+          170
+        ],
+        [
+          "speed2",
+          176
+        ],
+        [
+          "capacity3",
+          190
+        ],
+        [
+          "tariff3",
+          205
+        ],
+        [
+          "speed3",
+          224
+        ],
+        [
+          "capacity4",
+          239
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "tariff4",
+          253
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "speed4",
+          270
+        ],
+        [
+          "capacity5",
+          289
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          317
+        ],
+        [
+          "speed5",
+          345
+        ],
+        [
+          "complete",
+          345
+        ]
+      ],
+      "doneAt": 345,
+      "served": 67,
+      "earned": 1885,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 345,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "tariff1": 134,
+        "capacity1": 144,
+        "tariff2": 154,
+        "speed1": 162,
+        "capacity2": 170,
+        "speed2": 176,
+        "capacity3": 190,
+        "tariff3": 205,
+        "speed3": 224,
+        "capacity4": 239,
+        "mission6": 241,
+        "tariff4": 253,
+        "mission7": 270,
+        "speed4": 270,
+        "capacity5": 289,
+        "mission8": 309,
+        "tariff5": 317,
+        "speed5": 345,
+        "complete": 345
+      }
+    },
+    {
+      "strategy": "save-tariff>speed>capacity",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "tariff1",
+          134
+        ],
+        [
+          "capacity1",
+          144
+        ],
+        [
+          "tariff2",
+          154
+        ],
+        [
+          "speed1",
+          162
+        ],
+        [
+          "capacity2",
+          170
+        ],
+        [
+          "speed2",
+          176
+        ],
+        [
+          "capacity3",
+          190
+        ],
+        [
+          "tariff3",
+          205
+        ],
+        [
+          "speed3",
+          224
+        ],
+        [
+          "capacity4",
+          239
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "tariff4",
+          253
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "speed4",
+          270
+        ],
+        [
+          "capacity5",
+          289
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          317
+        ],
+        [
+          "speed5",
+          345
+        ],
+        [
+          "complete",
+          345
+        ]
+      ],
+      "doneAt": 345,
+      "served": 67,
+      "earned": 1885,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 345,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "tariff1": 134,
+        "capacity1": 144,
+        "tariff2": 154,
+        "speed1": 162,
+        "capacity2": 170,
+        "speed2": 176,
+        "capacity3": 190,
+        "tariff3": 205,
+        "speed3": 224,
+        "capacity4": 239,
+        "mission6": 241,
+        "tariff4": 253,
+        "mission7": 270,
+        "speed4": 270,
+        "capacity5": 289,
+        "mission8": 309,
+        "tariff5": 317,
+        "speed5": 345,
+        "complete": 345
+      }
+    },
+    {
+      "strategy": "save-capacity>tariff>speed",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "capacity1",
+          134
+        ],
+        [
+          "tariff1",
+          144
+        ],
+        [
+          "capacity2",
+          154
+        ],
+        [
+          "speed1",
+          162
+        ],
+        [
+          "tariff2",
+          174
+        ],
+        [
+          "speed2",
+          180
+        ],
+        [
+          "capacity3",
+          191
+        ],
+        [
+          "tariff3",
+          207
+        ],
+        [
+          "capacity4",
+          225
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "tariff4",
+          241
+        ],
+        [
+          "speed3",
+          253
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "speed4",
+          270
+        ],
+        [
+          "capacity5",
+          289
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          317
+        ],
+        [
+          "speed5",
+          345
+        ],
+        [
+          "complete",
+          345
+        ]
+      ],
+      "doneAt": 345,
+      "served": 67,
+      "earned": 1883,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 345,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "capacity1": 134,
+        "tariff1": 144,
+        "capacity2": 154,
+        "speed1": 162,
+        "tariff2": 174,
+        "speed2": 180,
+        "capacity3": 191,
+        "tariff3": 207,
+        "capacity4": 225,
+        "mission6": 241,
+        "tariff4": 241,
+        "speed3": 253,
+        "mission7": 270,
+        "speed4": 270,
+        "capacity5": 289,
+        "mission8": 309,
+        "tariff5": 317,
+        "speed5": 345,
+        "complete": 345
+      }
+    },
+    {
+      "strategy": "save-capacity>speed>tariff",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "capacity1",
+          134
+        ],
+        [
+          "speed1",
+          144
+        ],
+        [
+          "tariff1",
+          154
+        ],
+        [
+          "capacity2",
+          162
+        ],
+        [
+          "tariff2",
+          174
+        ],
+        [
+          "speed2",
+          182
+        ],
+        [
+          "capacity3",
+          191
+        ],
+        [
+          "tariff3",
+          210
+        ],
+        [
+          "speed3",
+          225
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "capacity4",
+          241
+        ],
+        [
+          "tariff4",
+          255
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "speed4",
+          271
+        ],
+        [
+          "capacity5",
+          290
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          317
+        ],
+        [
+          "speed5",
+          346
+        ],
+        [
+          "complete",
+          346
+        ]
+      ],
+      "doneAt": 346,
+      "served": 68,
+      "earned": 1889,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 346,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "capacity1": 134,
+        "speed1": 144,
+        "tariff1": 154,
+        "capacity2": 162,
+        "tariff2": 174,
+        "speed2": 182,
+        "capacity3": 191,
+        "tariff3": 210,
+        "speed3": 225,
+        "mission6": 241,
+        "capacity4": 241,
+        "tariff4": 255,
+        "mission7": 270,
+        "speed4": 271,
+        "capacity5": 290,
+        "mission8": 309,
+        "tariff5": 317,
+        "speed5": 346,
+        "complete": 346
+      }
+    },
+    {
+      "strategy": "save-speed>tariff>capacity",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "tariff1",
+          134
+        ],
+        [
+          "capacity1",
+          144
+        ],
+        [
+          "speed1",
+          154
+        ],
+        [
+          "capacity2",
+          161
+        ],
+        [
+          "tariff2",
+          170
+        ],
+        [
+          "speed2",
+          180
+        ],
+        [
+          "capacity3",
+          190
+        ],
+        [
+          "tariff3",
+          207
+        ],
+        [
+          "speed3",
+          225
+        ],
+        [
+          "capacity4",
+          239
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "tariff4",
+          253
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "speed4",
+          270
+        ],
+        [
+          "capacity5",
+          290
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          317
+        ],
+        [
+          "speed5",
+          345
+        ],
+        [
+          "complete",
+          345
+        ]
+      ],
+      "doneAt": 345,
+      "served": 67,
+      "earned": 1878,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 345,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "tariff1": 134,
+        "capacity1": 144,
+        "speed1": 154,
+        "capacity2": 161,
+        "tariff2": 170,
+        "speed2": 180,
+        "capacity3": 190,
+        "tariff3": 207,
+        "speed3": 225,
+        "capacity4": 239,
+        "mission6": 241,
+        "tariff4": 253,
+        "mission7": 270,
+        "speed4": 270,
+        "capacity5": 290,
+        "mission8": 309,
+        "tariff5": 317,
+        "speed5": 345,
+        "complete": 345
+      }
+    },
+    {
+      "strategy": "save-speed>capacity>tariff",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "bay2",
+          36
+        ],
+        [
+          "combo3",
+          47
+        ],
+        [
+          "mission2",
+          58
+        ],
+        [
+          "bay3",
+          63
+        ],
+        [
+          "viptip",
+          90
+        ],
+        [
+          "mission3",
+          105
+        ],
+        [
+          "mission4",
+          108
+        ],
+        [
+          "worker",
+          110
+        ],
+        [
+          "selfplug",
+          112
+        ],
+        [
+          "hungry",
+          117
+        ],
+        [
+          "workerplug",
+          118
+        ],
+        [
+          "mission5",
+          128
+        ],
+        [
+          "bay4",
+          131
+        ],
+        [
+          "capacity1",
+          134
+        ],
+        [
+          "speed1",
+          144
+        ],
+        [
+          "tariff1",
+          154
+        ],
+        [
+          "capacity2",
+          162
+        ],
+        [
+          "tariff2",
+          174
+        ],
+        [
+          "speed2",
+          182
+        ],
+        [
+          "capacity3",
+          191
+        ],
+        [
+          "tariff3",
+          210
+        ],
+        [
+          "speed3",
+          225
+        ],
+        [
+          "mission6",
+          241
+        ],
+        [
+          "speed4",
+          241
+        ],
+        [
+          "capacity4",
+          256
+        ],
+        [
+          "mission7",
+          270
+        ],
+        [
+          "tariff4",
+          271
+        ],
+        [
+          "capacity5",
+          296
+        ],
+        [
+          "mission8",
+          309
+        ],
+        [
+          "tariff5",
+          322
+        ],
+        [
+          "speed5",
+          346
+        ],
+        [
+          "complete",
+          346
+        ]
+      ],
+      "doneAt": 346,
+      "served": 68,
+      "earned": 1873,
+      "rating": 4.6,
+      "missions": 8,
+      "playSec": 346,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "mission1": 34,
+        "bay2": 36,
+        "combo3": 47,
+        "mission2": 58,
+        "bay3": 63,
+        "viptip": 90,
+        "mission3": 105,
+        "mission4": 108,
+        "worker": 110,
+        "selfplug": 112,
+        "hungry": 117,
+        "workerplug": 118,
+        "mission5": 128,
+        "bay4": 131,
+        "capacity1": 134,
+        "speed1": 144,
+        "tariff1": 154,
+        "capacity2": 162,
+        "tariff2": 174,
+        "speed2": 182,
+        "capacity3": 191,
+        "tariff3": 210,
+        "speed3": 225,
+        "mission6": 241,
+        "speed4": 241,
+        "capacity4": 256,
+        "mission7": 270,
+        "tariff4": 271,
+        "capacity5": 296,
+        "mission8": 309,
+        "tariff5": 322,
+        "speed5": 346,
+        "complete": 346
+      }
+    },
+    {
+      "strategy": "spend-cheapest",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "capacity1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "tariff1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "capacity2",
+          83
+        ],
+        [
+          "tariff2",
+          114
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "bay2",
+          142
+        ],
+        [
+          "combo3",
+          153
+        ],
+        [
+          "speed2",
+          159
+        ],
+        [
+          "mission3",
+          172
+        ],
+        [
+          "capacity3",
+          173
+        ],
+        [
+          "mission4",
+          180
+        ],
+        [
+          "tariff3",
+          187
+        ],
+        [
+          "mission5",
+          194
+        ],
+        [
+          "speed3",
+          198
+        ],
+        [
+          "bay3",
+          222
+        ],
+        [
+          "capacity4",
+          241
+        ],
+        [
+          "mission6",
+          248
+        ],
+        [
+          "tariff4",
+          256
+        ],
+        [
+          "mission7",
+          265
+        ],
+        [
+          "speed4",
+          271
+        ],
+        [
+          "mission8",
+          292
+        ],
+        [
+          "capacity5",
+          296
+        ],
+        [
+          "worker",
+          327
+        ],
+        [
+          "bay4",
+          347
+        ],
+        [
+          "mission9",
+          348
+        ],
+        [
+          "mission10",
+          358
+        ],
+        [
+          "tariff5",
+          363
+        ],
+        [
+          "workerplug",
+          367
+        ],
+        [
+          "speed5",
+          386
+        ],
+        [
+          "complete",
+          386
+        ]
+      ],
+      "doneAt": 386,
+      "served": 55,
+      "earned": 1868,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 386,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "capacity1": 27,
+        "mission1": 34,
+        "tariff1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "capacity2": 83,
+        "tariff2": 114,
+        "viptip": 140,
+        "bay2": 142,
+        "combo3": 153,
+        "speed2": 159,
+        "mission3": 172,
+        "capacity3": 173,
+        "mission4": 180,
+        "tariff3": 187,
+        "mission5": 194,
+        "speed3": 198,
+        "bay3": 222,
+        "capacity4": 241,
+        "mission6": 248,
+        "tariff4": 256,
+        "mission7": 265,
+        "speed4": 271,
+        "mission8": 292,
+        "capacity5": 296,
+        "worker": 327,
+        "bay4": 347,
+        "mission9": 348,
+        "mission10": 358,
+        "tariff5": 363,
+        "workerplug": 367,
+        "speed5": 386,
+        "complete": 386
+      }
+    },
+    {
+      "strategy": "spend-tariff>capacity>speed",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "tariff1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "capacity1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "tariff2",
+          83
+        ],
+        [
+          "capacity2",
+          106
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "speed2",
+          140
+        ],
+        [
+          "bay2",
+          174
+        ],
+        [
+          "combo3",
+          182
+        ],
+        [
+          "mission3",
+          186
+        ],
+        [
+          "capacity3",
+          186
+        ],
+        [
+          "mission4",
+          195
+        ],
+        [
+          "tariff3",
+          202
+        ],
+        [
+          "mission5",
+          209
+        ],
+        [
+          "speed3",
+          213
+        ],
+        [
+          "bay3",
+          237
+        ],
+        [
+          "capacity4",
+          256
+        ],
+        [
+          "mission6",
+          263
+        ],
+        [
+          "tariff4",
+          271
+        ],
+        [
+          "mission7",
+          279
+        ],
+        [
+          "speed4",
+          286
+        ],
+        [
+          "mission8",
+          307
+        ],
+        [
+          "capacity5",
+          311
+        ],
+        [
+          "worker",
+          341
+        ],
+        [
+          "bay4",
+          362
+        ],
+        [
+          "mission9",
+          363
+        ],
+        [
+          "mission10",
+          373
+        ],
+        [
+          "tariff5",
+          378
+        ],
+        [
+          "workerplug",
+          382
+        ],
+        [
+          "speed5",
+          401
+        ],
+        [
+          "complete",
+          401
+        ]
+      ],
+      "doneAt": 401,
+      "served": 55,
+      "earned": 1870,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 401,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "tariff1": 27,
+        "mission1": 34,
+        "capacity1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "tariff2": 83,
+        "capacity2": 106,
+        "viptip": 140,
+        "speed2": 140,
+        "bay2": 174,
+        "combo3": 182,
+        "mission3": 186,
+        "capacity3": 186,
+        "mission4": 195,
+        "tariff3": 202,
+        "mission5": 209,
+        "speed3": 213,
+        "bay3": 237,
+        "capacity4": 256,
+        "mission6": 263,
+        "tariff4": 271,
+        "mission7": 279,
+        "speed4": 286,
+        "mission8": 307,
+        "capacity5": 311,
+        "worker": 341,
+        "bay4": 362,
+        "mission9": 363,
+        "mission10": 373,
+        "tariff5": 378,
+        "workerplug": 382,
+        "speed5": 401,
+        "complete": 401
+      }
+    },
+    {
+      "strategy": "spend-tariff>speed>capacity",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "tariff1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "capacity1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "tariff2",
+          83
+        ],
+        [
+          "capacity2",
+          106
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "speed2",
+          140
+        ],
+        [
+          "bay2",
+          174
+        ],
+        [
+          "combo3",
+          182
+        ],
+        [
+          "mission3",
+          186
+        ],
+        [
+          "capacity3",
+          186
+        ],
+        [
+          "mission4",
+          195
+        ],
+        [
+          "tariff3",
+          202
+        ],
+        [
+          "mission5",
+          209
+        ],
+        [
+          "speed3",
+          213
+        ],
+        [
+          "bay3",
+          237
+        ],
+        [
+          "capacity4",
+          256
+        ],
+        [
+          "mission6",
+          263
+        ],
+        [
+          "tariff4",
+          271
+        ],
+        [
+          "mission7",
+          279
+        ],
+        [
+          "speed4",
+          286
+        ],
+        [
+          "mission8",
+          307
+        ],
+        [
+          "capacity5",
+          311
+        ],
+        [
+          "worker",
+          341
+        ],
+        [
+          "bay4",
+          362
+        ],
+        [
+          "mission9",
+          363
+        ],
+        [
+          "mission10",
+          373
+        ],
+        [
+          "tariff5",
+          378
+        ],
+        [
+          "workerplug",
+          382
+        ],
+        [
+          "speed5",
+          401
+        ],
+        [
+          "complete",
+          401
+        ]
+      ],
+      "doneAt": 401,
+      "served": 55,
+      "earned": 1870,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 401,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "tariff1": 27,
+        "mission1": 34,
+        "capacity1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "tariff2": 83,
+        "capacity2": 106,
+        "viptip": 140,
+        "speed2": 140,
+        "bay2": 174,
+        "combo3": 182,
+        "mission3": 186,
+        "capacity3": 186,
+        "mission4": 195,
+        "tariff3": 202,
+        "mission5": 209,
+        "speed3": 213,
+        "bay3": 237,
+        "capacity4": 256,
+        "mission6": 263,
+        "tariff4": 271,
+        "mission7": 279,
+        "speed4": 286,
+        "mission8": 307,
+        "capacity5": 311,
+        "worker": 341,
+        "bay4": 362,
+        "mission9": 363,
+        "mission10": 373,
+        "tariff5": 378,
+        "workerplug": 382,
+        "speed5": 401,
+        "complete": 401
+      }
+    },
+    {
+      "strategy": "spend-capacity>tariff>speed",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "capacity1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "tariff1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "capacity2",
+          83
+        ],
+        [
+          "tariff2",
+          114
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "bay2",
+          142
+        ],
+        [
+          "combo3",
+          153
+        ],
+        [
+          "speed2",
+          159
+        ],
+        [
+          "mission3",
+          172
+        ],
+        [
+          "capacity3",
+          173
+        ],
+        [
+          "mission4",
+          180
+        ],
+        [
+          "tariff3",
+          187
+        ],
+        [
+          "mission5",
+          194
+        ],
+        [
+          "speed3",
+          198
+        ],
+        [
+          "bay3",
+          222
+        ],
+        [
+          "capacity4",
+          241
+        ],
+        [
+          "mission6",
+          248
+        ],
+        [
+          "tariff4",
+          256
+        ],
+        [
+          "mission7",
+          265
+        ],
+        [
+          "speed4",
+          271
+        ],
+        [
+          "mission8",
+          292
+        ],
+        [
+          "capacity5",
+          296
+        ],
+        [
+          "worker",
+          327
+        ],
+        [
+          "bay4",
+          347
+        ],
+        [
+          "mission9",
+          348
+        ],
+        [
+          "mission10",
+          358
+        ],
+        [
+          "tariff5",
+          363
+        ],
+        [
+          "workerplug",
+          367
+        ],
+        [
+          "speed5",
+          386
+        ],
+        [
+          "complete",
+          386
+        ]
+      ],
+      "doneAt": 386,
+      "served": 55,
+      "earned": 1868,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 386,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "capacity1": 27,
+        "mission1": 34,
+        "tariff1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "capacity2": 83,
+        "tariff2": 114,
+        "viptip": 140,
+        "bay2": 142,
+        "combo3": 153,
+        "speed2": 159,
+        "mission3": 172,
+        "capacity3": 173,
+        "mission4": 180,
+        "tariff3": 187,
+        "mission5": 194,
+        "speed3": 198,
+        "bay3": 222,
+        "capacity4": 241,
+        "mission6": 248,
+        "tariff4": 256,
+        "mission7": 265,
+        "speed4": 271,
+        "mission8": 292,
+        "capacity5": 296,
+        "worker": 327,
+        "bay4": 347,
+        "mission9": 348,
+        "mission10": 358,
+        "tariff5": 363,
+        "workerplug": 367,
+        "speed5": 386,
+        "complete": 386
+      }
+    },
+    {
+      "strategy": "spend-capacity>speed>tariff",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "capacity1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "tariff1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "capacity2",
+          83
+        ],
+        [
+          "tariff2",
+          114
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "bay2",
+          142
+        ],
+        [
+          "combo3",
+          153
+        ],
+        [
+          "speed2",
+          159
+        ],
+        [
+          "mission3",
+          172
+        ],
+        [
+          "capacity3",
+          173
+        ],
+        [
+          "mission4",
+          180
+        ],
+        [
+          "tariff3",
+          187
+        ],
+        [
+          "mission5",
+          194
+        ],
+        [
+          "speed3",
+          198
+        ],
+        [
+          "bay3",
+          222
+        ],
+        [
+          "capacity4",
+          241
+        ],
+        [
+          "mission6",
+          248
+        ],
+        [
+          "tariff4",
+          256
+        ],
+        [
+          "mission7",
+          265
+        ],
+        [
+          "speed4",
+          271
+        ],
+        [
+          "mission8",
+          292
+        ],
+        [
+          "capacity5",
+          296
+        ],
+        [
+          "worker",
+          327
+        ],
+        [
+          "bay4",
+          347
+        ],
+        [
+          "mission9",
+          348
+        ],
+        [
+          "mission10",
+          358
+        ],
+        [
+          "tariff5",
+          363
+        ],
+        [
+          "workerplug",
+          367
+        ],
+        [
+          "speed5",
+          386
+        ],
+        [
+          "complete",
+          386
+        ]
+      ],
+      "doneAt": 386,
+      "served": 55,
+      "earned": 1868,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 386,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "capacity1": 27,
+        "mission1": 34,
+        "tariff1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "capacity2": 83,
+        "tariff2": 114,
+        "viptip": 140,
+        "bay2": 142,
+        "combo3": 153,
+        "speed2": 159,
+        "mission3": 172,
+        "capacity3": 173,
+        "mission4": 180,
+        "tariff3": 187,
+        "mission5": 194,
+        "speed3": 198,
+        "bay3": 222,
+        "capacity4": 241,
+        "mission6": 248,
+        "tariff4": 256,
+        "mission7": 265,
+        "speed4": 271,
+        "mission8": 292,
+        "capacity5": 296,
+        "worker": 327,
+        "bay4": 347,
+        "mission9": 348,
+        "mission10": 358,
+        "tariff5": 363,
+        "workerplug": 367,
+        "speed5": 386,
+        "complete": 386
+      }
+    },
+    {
+      "strategy": "spend-speed>tariff>capacity",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "tariff1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "capacity1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "tariff2",
+          83
+        ],
+        [
+          "capacity2",
+          106
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "speed2",
+          140
+        ],
+        [
+          "bay2",
+          174
+        ],
+        [
+          "combo3",
+          182
+        ],
+        [
+          "mission3",
+          186
+        ],
+        [
+          "capacity3",
+          186
+        ],
+        [
+          "mission4",
+          195
+        ],
+        [
+          "tariff3",
+          202
+        ],
+        [
+          "mission5",
+          209
+        ],
+        [
+          "speed3",
+          213
+        ],
+        [
+          "bay3",
+          237
+        ],
+        [
+          "capacity4",
+          256
+        ],
+        [
+          "mission6",
+          263
+        ],
+        [
+          "tariff4",
+          271
+        ],
+        [
+          "mission7",
+          279
+        ],
+        [
+          "speed4",
+          286
+        ],
+        [
+          "mission8",
+          307
+        ],
+        [
+          "capacity5",
+          311
+        ],
+        [
+          "worker",
+          341
+        ],
+        [
+          "bay4",
+          362
+        ],
+        [
+          "mission9",
+          363
+        ],
+        [
+          "mission10",
+          373
+        ],
+        [
+          "tariff5",
+          378
+        ],
+        [
+          "workerplug",
+          382
+        ],
+        [
+          "speed5",
+          401
+        ],
+        [
+          "complete",
+          401
+        ]
+      ],
+      "doneAt": 401,
+      "served": 55,
+      "earned": 1870,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 401,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "tariff1": 27,
+        "mission1": 34,
+        "capacity1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "tariff2": 83,
+        "capacity2": 106,
+        "viptip": 140,
+        "speed2": 140,
+        "bay2": 174,
+        "combo3": 182,
+        "mission3": 186,
+        "capacity3": 186,
+        "mission4": 195,
+        "tariff3": 202,
+        "mission5": 209,
+        "speed3": 213,
+        "bay3": 237,
+        "capacity4": 256,
+        "mission6": 263,
+        "tariff4": 271,
+        "mission7": 279,
+        "speed4": 286,
+        "mission8": 307,
+        "capacity5": 311,
+        "worker": 341,
+        "bay4": 362,
+        "mission9": 363,
+        "mission10": 373,
+        "tariff5": 378,
+        "workerplug": 382,
+        "speed5": 401,
+        "complete": 401
+      }
+    },
+    {
+      "strategy": "spend-speed>capacity>tariff",
+      "profile": "bot",
+      "log": [
+        [
+          "plug",
+          4
+        ],
+        [
+          "serve",
+          8
+        ],
+        [
+          "idlefee",
+          12
+        ],
+        [
+          "car1",
+          13
+        ],
+        [
+          "capacity1",
+          27
+        ],
+        [
+          "mission1",
+          34
+        ],
+        [
+          "tariff1",
+          35
+        ],
+        [
+          "speed1",
+          61
+        ],
+        [
+          "mission2",
+          83
+        ],
+        [
+          "capacity2",
+          83
+        ],
+        [
+          "tariff2",
+          114
+        ],
+        [
+          "viptip",
+          140
+        ],
+        [
+          "bay2",
+          142
+        ],
+        [
+          "combo3",
+          153
+        ],
+        [
+          "speed2",
+          159
+        ],
+        [
+          "mission3",
+          172
+        ],
+        [
+          "capacity3",
+          173
+        ],
+        [
+          "mission4",
+          180
+        ],
+        [
+          "tariff3",
+          187
+        ],
+        [
+          "mission5",
+          194
+        ],
+        [
+          "speed3",
+          198
+        ],
+        [
+          "bay3",
+          222
+        ],
+        [
+          "capacity4",
+          241
+        ],
+        [
+          "mission6",
+          248
+        ],
+        [
+          "tariff4",
+          256
+        ],
+        [
+          "mission7",
+          265
+        ],
+        [
+          "speed4",
+          271
+        ],
+        [
+          "mission8",
+          292
+        ],
+        [
+          "capacity5",
+          296
+        ],
+        [
+          "worker",
+          327
+        ],
+        [
+          "bay4",
+          347
+        ],
+        [
+          "mission9",
+          348
+        ],
+        [
+          "mission10",
+          358
+        ],
+        [
+          "tariff5",
+          363
+        ],
+        [
+          "workerplug",
+          367
+        ],
+        [
+          "speed5",
+          386
+        ],
+        [
+          "complete",
+          386
+        ]
+      ],
+      "doneAt": 386,
+      "served": 55,
+      "earned": 1868,
+      "rating": 4.9,
+      "missions": 10,
+      "playSec": 386,
+      "at": {
+        "plug": 4,
+        "serve": 8,
+        "idlefee": 12,
+        "car1": 13,
+        "capacity1": 27,
+        "mission1": 34,
+        "tariff1": 35,
+        "speed1": 61,
+        "mission2": 83,
+        "capacity2": 83,
+        "tariff2": 114,
+        "viptip": 140,
+        "bay2": 142,
+        "combo3": 153,
+        "speed2": 159,
+        "mission3": 172,
+        "capacity3": 173,
+        "mission4": 180,
+        "tariff3": 187,
+        "mission5": 194,
+        "speed3": 198,
+        "bay3": 222,
+        "capacity4": 241,
+        "mission6": 248,
+        "tariff4": 256,
+        "mission7": 265,
+        "speed4": 271,
+        "mission8": 292,
+        "capacity5": 296,
+        "worker": 327,
+        "bay4": 347,
+        "mission9": 348,
+        "mission10": 358,
+        "tariff5": 363,
+        "workerplug": 367,
+        "speed5": 386,
+        "complete": 386
+      }
+    },
+    {
+      "strategy": "save-cheapest",
+      "profile": "human",
+      "log": [
+        [
+          "plug",
+          3
+        ],
+        [
+          "idlefee",
+          11
+        ],
+        [
+          "hungry",
+          16
+        ],
+        [
+          "car1",
+          18
+        ],
+        [
+          "serve",
+          32
+        ],
+        [
+          "bay2",
+          58
+        ],
+        [
+          "mission1",
+          66
+        ],
+        [
+          "combo3",
+          67
+        ],
+        [
+          "selfplug",
+          79
+        ],
+        [
+          "bay3",
+          96
+        ],
+        [
+          "mission2",
+          120
+        ],
+        [
+          "mission3",
+          164
+        ],
+        [
+          "capacity1",
+          166
+        ],
+        [
+          "worker",
+          169
+        ],
+        [
+          "workerplug",
+          171
+        ],
+        [
+          "viptip",
+          193
+        ],
+        [
+          "mission4",
+          196
+        ],
+        [
+          "bay4",
+          201
+        ],
+        [
+          "tariff1",
+          220
+        ],
+        [
+          "speed1",
+          234
+        ],
+        [
+          "capacity2",
+          236
+        ],
+        [
+          "tariff2",
+          242
+        ],
+        [
+          "speed2",
+          256
+        ],
+        [
+          "mission5",
+          262
+        ],
+        [
+          "capacity3",
+          262
+        ],
+        [
+          "tariff3",
+          294
+        ],
+        [
+          "speed3",
+          300
+        ],
+        [
+          "capacity4",
+          332
+        ],
+        [
+          "tariff4",
+          341
+        ],
+        [
+          "speed4",
+          359
+        ],
+        [
+          "capacity5",
+          390
+        ],
+        [
+          "tariff5",
+          420
+        ],
+        [
+          "speed5",
+          453
+        ],
+        [
+          "complete",
+          453
+        ]
+      ],
+      "doneAt": 453,
+      "served": 76,
+      "earned": 1934,
+      "rating": 4.1,
+      "missions": 5,
+      "playSec": 453,
+      "at": {
+        "plug": 3,
+        "idlefee": 11,
+        "hungry": 16,
+        "car1": 18,
+        "serve": 32,
+        "bay2": 58,
+        "mission1": 66,
+        "combo3": 67,
+        "selfplug": 79,
+        "bay3": 96,
+        "mission2": 120,
+        "mission3": 164,
+        "capacity1": 166,
+        "worker": 169,
+        "workerplug": 171,
+        "viptip": 193,
+        "mission4": 196,
+        "bay4": 201,
+        "tariff1": 220,
+        "speed1": 234,
+        "capacity2": 236,
+        "tariff2": 242,
+        "speed2": 256,
+        "mission5": 262,
+        "capacity3": 262,
+        "tariff3": 294,
+        "speed3": 300,
+        "capacity4": 332,
+        "tariff4": 341,
+        "speed4": 359,
+        "capacity5": 390,
+        "tariff5": 420,
+        "speed5": 453,
+        "complete": 453
+      }
+    },
+    {
+      "strategy": "save-cheapest",
+      "profile": "human",
+      "log": [
+        [
+          "plug",
+          3
+        ],
+        [
+          "idlefee",
+          11
+        ],
+        [
+          "hungry",
+          16
+        ],
+        [
+          "car1",
+          18
+        ],
+        [
+          "serve",
+          32
+        ],
+        [
+          "bay2",
+          58
+        ],
+        [
+          "mission1",
+          66
+        ],
+        [
+          "combo3",
+          67
+        ],
+        [
+          "selfplug",
+          79
+        ],
+        [
+          "bay3",
+          96
+        ],
+        [
+          "mission2",
+          120
+        ],
+        [
+          "mission3",
+          164
+        ],
+        [
+          "capacity1",
+          166
+        ],
+        [
+          "worker",
+          169
+        ],
+        [
+          "workerplug",
+          171
+        ],
+        [
+          "viptip",
+          193
+        ],
+        [
+          "mission4",
+          196
+        ],
+        [
+          "bay4",
+          201
+        ],
+        [
+          "tariff1",
+          220
+        ],
+        [
+          "speed1",
+          234
+        ],
+        [
+          "capacity2",
+          236
+        ],
+        [
+          "tariff2",
+          242
+        ],
+        [
+          "speed2",
+          256
+        ],
+        [
+          "mission5",
+          262
+        ],
+        [
+          "capacity3",
+          262
+        ],
+        [
+          "tariff3",
+          294
+        ],
+        [
+          "speed3",
+          300
+        ],
+        [
+          "capacity4",
+          332
+        ],
+        [
+          "tariff4",
+          341
+        ],
+        [
+          "speed4",
+          359
+        ],
+        [
+          "capacity5",
+          390
+        ],
+        [
+          "tariff5",
+          420
+        ],
+        [
+          "speed5",
+          453
+        ],
+        [
+          "complete",
+          453
+        ]
+      ],
+      "doneAt": 453,
+      "served": 76,
+      "earned": 1934,
+      "rating": 4.1,
+      "missions": 5,
+      "playSec": 453,
+      "at": {
+        "plug": 3,
+        "idlefee": 11,
+        "hungry": 16,
+        "car1": 18,
+        "serve": 32,
+        "bay2": 58,
+        "mission1": 66,
+        "combo3": 67,
+        "selfplug": 79,
+        "bay3": 96,
+        "mission2": 120,
+        "mission3": 164,
+        "capacity1": 166,
+        "worker": 169,
+        "workerplug": 171,
+        "viptip": 193,
+        "mission4": 196,
+        "bay4": 201,
+        "tariff1": 220,
+        "speed1": 234,
+        "capacity2": 236,
+        "tariff2": 242,
+        "speed2": 256,
+        "mission5": 262,
+        "capacity3": 262,
+        "tariff3": 294,
+        "speed3": 300,
+        "capacity4": 332,
+        "tariff4": 341,
+        "speed4": 359,
+        "capacity5": 390,
+        "tariff5": 420,
+        "speed5": 453,
+        "complete": 453
+      }
+    }
+  ]
+}
