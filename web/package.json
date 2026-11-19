@@ -1,0 +1,14 @@
+{
+  "name": "charge-ready-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node tools/check-economy.js",
+    "playtest": "node tools/playtest.cjs",
+    "simulate": "node tools/simulate.cjs",
+    "layout": "node tools/layout-check.cjs",
+    "client": "node tools/client-test.cjs",
+    "test": "node tools/check-economy.js && node tools/simulate.cjs && node tools/layout-check.cjs",
+    "serve": "npx --yes serve ."
+  }
+}

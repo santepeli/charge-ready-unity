@@ -1,0 +1,540 @@
+<meta charset="utf-8">
+<title>Charge Ready</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&display=swap">
+<style>
+  /* Full-screen game canvas with a floating HUD; single bright look, no theme switch. */
+  :root {
+    --ink: #14233a; --paper: #ffffff; --volt: #2fe39b; --coin: #ffd34d; --muted: #6b7f99; --purple: #7a5cff; --shade: rgba(20, 35, 58, 0.55);
+    --font: 'Baloo 2', ui-rounded, 'Segoe UI', system-ui, sans-serif;
+    color-scheme: light;
+  }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; margin: 0; overflow: hidden; background: #6cc070; color: var(--ink); font-family: var(--font); user-select: none; -webkit-user-select: none; }
+  /* iPhone Safari ignores user-scalable=no, so every element opts out of double-tap zoom; the game canvas takes all touches itself. */
+  * { touch-action: manipulation; }
+  #game, #game canvas { position: fixed; inset: 0; width: 100%; height: 100%; touch-action: none; }
+  .top { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 12px); left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; pointer-events: none; }
+  .top > * { pointer-events: auto; }
+  .left { display: flex; align-items: center; gap: 8px; }
+  #cash { background: var(--paper); border: 3px solid var(--ink); border-radius: 999px; padding: 0 16px; font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; box-shadow: 0 4px 0 var(--ink); }
+  #cash::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 8px; border-radius: 3px; background: #f2c230; border: 2px solid #9a6a00; vertical-align: 1px; }
+  #settingsBtn { width: 44px; height: 44px; padding: 0; border-radius: 50%; background: var(--paper); display: grid; place-items: center; }
+  .station { display: grid; justify-items: end; gap: 4px; pointer-events: none; position: relative; }
+  /* A dark halo behind the stage icons keeps them readable over bright signs in the scene. */
+  .station > span { border-radius: 12px; box-shadow: 0 0 0 3px rgba(20, 35, 58, 0.45); background: rgba(20, 35, 58, 0.45); }
+  .station span { font-size: 13px; font-weight: 800; letter-spacing: 0.06em; color: var(--paper); text-shadow: 0 2px 0 var(--ink); }
+  .bar { width: 120px; height: 16px; background: var(--paper); border: 3px solid var(--ink); border-radius: 999px; overflow: hidden; }
+  #stageBar { position: relative; width: 150px; height: 16px; }
+  #progressText { position: absolute; inset: 0; display: grid; place-items: center; font-size: 9px; line-height: 1; font-weight: 900; color: var(--ink); white-space: nowrap; }
+  #progress { height: 100%; width: 0; background: var(--volt); transition: width 0.3s; }
+  #rating { display: inline-block; }
+  /* The station name doubles as the button to the station chain map; a green dot means a new station is open. */
+  #city { display: block; white-space: nowrap; max-width: calc(100vw - 214px); overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; font-size: 11px; font-weight: 800; text-align: right; color: var(--ink); background: var(--paper); border: 2px solid var(--ink); border-radius: 999px; padding: 1px 8px; pointer-events: auto; cursor: pointer; position: relative; }
+  #city.new { background: var(--purple); color: var(--paper); animation: nudge 1.2s ease-in-out infinite; }
+  #cityHand { position: absolute; bottom: -4px; font-size: 24px; line-height: 1; animation: point 0.8s ease-in-out infinite; filter: drop-shadow(0 2px 0 var(--ink)); }
+  @keyframes point { 50% { transform: translateX(8px); } }
+  #nextStation { width: 100%; font-size: 18px; font-weight: 800; color: var(--paper); background: var(--purple); border: 3px solid var(--ink); border-radius: 16px; box-shadow: 0 4px 0 var(--ink); padding: 12px; margin-bottom: 8px; animation: nudge 1.2s ease-in-out infinite; }
+  #stageUp.station { background: var(--purple); }
+  #stageUp.station #stageUpName, #stageUp.station small { color: var(--paper); }
+  #city.new::after { content: "!"; position: absolute; top: -7px; right: -7px; width: 16px; height: 16px; border-radius: 50%; background: var(--volt); border: 2px solid var(--ink); font-size: 11px; line-height: 16px; text-align: center; }
+  #chain { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 6; }
+  #chain .sheet { max-height: calc(100vh - 96px); overflow-y: auto; }
+  #chainRows { display: grid; gap: 12px; position: relative; padding: 4px 0; }
+  #chainRows::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 12px; margin-left: -6px; background: #d9cfbe; border-radius: 6px; }
+  .node { position: relative; background: var(--paper); border: 3px solid var(--ink); border-radius: 16px; box-shadow: 0 4px 0 var(--ink); padding: 8px 10px; display: grid; gap: 2px; }
+  .node.here { border-color: #18b87a; box-shadow: 0 4px 0 #18b87a; }
+  .node.locked { background: #e9b67c; }
+  .node b { font-size: 16px; }
+  .node .stars { color: #ffbf1f; font-size: 16px; } .node .stars i { color: #c3cad3; font-style: normal; }
+  .node .rate { position: absolute; right: 10px; top: 8px; background: #fff4c2; border: 2px solid #d9a400; color: #7a5600; border-radius: 10px; padding: 0 6px; font-size: 12px; font-weight: 800; }
+  .node small { color: var(--muted); font-weight: 600; }
+  .node button { justify-self: start; padding: 4px 14px; }
+  #travel { position: fixed; inset: 0; display: grid; place-items: center; background: var(--ink); color: var(--paper); font-size: 24px; font-weight: 800; z-index: 9; animation: fadein 0.3s; }
+  @keyframes fadein { from { opacity: 0; } }
+  /* Travel: Route 9 as a road with every station, the car driving from here to there. */
+  #travel .trip { position: relative; width: min(340px, 86vw); height: 90px; }
+  #travel .road { position: absolute; left: 0; right: 0; top: 52px; height: 18px; border-radius: 9px; background: #3b4658 repeating-linear-gradient(90deg, #fbf7ef 0 14px, transparent 14px 28px) 0 50% / 100% 3px no-repeat; animation: lane 0.4s linear infinite; }
+  @keyframes lane { to { background-position: -28px 50%; } }
+  #travel .stop { position: absolute; top: 4px; transform: translateX(-50%); font-size: 30px; }
+  #travel .car { position: absolute; top: 34px; transform: translateX(-50%); font-size: 34px; }
+  #travel .car.right { transform: translateX(-50%) scaleX(-1); }
+  #travel p { margin: 12px 0 0; }
+  #travel { align-content: center; }
+  /* Rush hour banner sits under the mission line, clear of the queue card on the right. */
+  #flash { position: fixed; inset: 0; background: #fff; pointer-events: none; z-index: 2; animation: flash 0.5s ease-out forwards; }
+  @keyframes flash { 0% { opacity: 0.85; } 30% { opacity: 0.2; } 45% { opacity: 0.6; } 100% { opacity: 0; } }
+  #adWarn { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 120px); left: 0; right: 0; margin: auto; width: max-content; background: var(--ink); color: var(--paper); border-radius: 12px; padding: 6px 14px; font-weight: 800; pointer-events: none; z-index: 7; }
+  #rivalBar { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 196px); left: 0; right: 0; margin: auto; width: max-content; max-width: calc(100vw - 32px); background: #2f6fd1; color: var(--paper); border: 3px solid var(--ink); border-radius: 14px; box-shadow: 0 4px 0 var(--ink); padding: 4px 12px; font-size: 16px; font-weight: 800; pointer-events: none; z-index: 3; }
+  #rush { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 196px); left: 0; right: 0; margin: auto; width: max-content; background: #ff9a3d; color: var(--paper); border: 3px solid var(--ink); border-radius: 14px; box-shadow: 0 4px 0 var(--ink); padding: 3px 12px; font-size: 15px; font-weight: 800; pointer-events: none; display: flex; align-items: center; gap: 6px; }
+  /* The ×2 button is the rewarded-ad spot of the publisher build; the prototype gives it for free. */
+  #rushDouble { pointer-events: auto; background: #4dabff; color: var(--paper); padding: 0 10px; font-size: 14px; border-width: 2px; }
+  #stage { font-style: normal; display: inline-flex; align-items: center; gap: 2px; vertical-align: middle; }
+  #stage .st { width: 19px; height: 19px; display: grid; place-items: center; border-radius: 50%; background: var(--paper); border: 2px solid var(--ink); font-size: 11px; filter: grayscale(1); opacity: 0.55; position: relative; }
+  #stage .st.now { filter: none; opacity: 1; background: var(--coin); animation: nudge 1.2s ease-in-out infinite; }
+  #stage .st.done { filter: none; opacity: 1; background: var(--volt); }
+  #stage .st.done::after { content: "✓"; position: absolute; right: -5px; bottom: -5px; width: 13px; height: 13px; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 9px; line-height: 13px; text-align: center; }
+  #stage i { width: 3px; height: 3px; background: var(--ink); }
+  #stageUp { position: fixed; top: 28%; left: 0; right: 0; margin: auto; width: min(280px, 80vw); box-sizing: border-box; display: grid; justify-items: center; gap: 2px; background: var(--paper); border: 4px solid var(--ink); border-radius: 22px; box-shadow: 0 6px 0 var(--ink); padding: 14px; pointer-events: none; z-index: 6; }
+  #stageUpTitle { font-size: 16px; font-weight: 800; letter-spacing: 0.12em; color: var(--paper); background: var(--ink); border-radius: 999px; padding: 2px 12px; }
+  #stageUpIcon { font-size: 64px; line-height: 1.1; }
+  #stageUpName { font-size: 26px; font-weight: 800; text-align: center; line-height: 1.1; }
+  #stageUp small { font-size: 15px; font-weight: 700; color: var(--muted); }
+  #mission { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 106px); left: max(16px, env(safe-area-inset-left, 0px)); font-size: 13px; font-weight: 800; color: var(--paper); text-shadow: 0 2px 0 var(--ink); pointer-events: none; }
+  /* The mini map sits bottom-left above the Books button, clear of the joystick and the top bar. */
+  #mapWrap { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 64px); left: max(12px, env(safe-area-inset-left, 0px)); }
+  #map { display: block; width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); cursor: pointer; }
+  #mapBadge { position: absolute; top: -6px; left: -6px; min-width: 22px; height: 22px; box-sizing: border-box; border-radius: 999px; background: #ff4d6d; border: 3px solid var(--ink); color: var(--paper); font-size: 13px; line-height: 16px; text-align: center; padding: 0 4px; font-weight: 800; }
+  #mapPanel { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; }
+  #mapBig { width: min(300px, 80vw); height: min(300px, 80vw); justify-self: center; cursor: pointer; }
+  .mapNote { color: var(--muted); font-size: 14px; text-align: center; }
+  #goalCard { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 66px); left: max(16px, env(safe-area-inset-left, 0px)); max-width: calc(100vw - 190px); display: grid; gap: 3px; pointer-events: none; }
+  #mission.goal { pointer-events: auto; cursor: pointer; background: rgba(20, 35, 58, 0.55); border-radius: 10px; padding: 2px 8px; margin-left: -8px; }
+  #goals { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 6; }
+  #goalRows div { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-top: 2px dashed #d5deea; font-weight: 700; }
+  #goalRows div.ok { color: #18b87a; }
+  #codeText { width: 100%; box-sizing: border-box; font: 12px monospace; border: 2px solid var(--ink); border-radius: 8px; padding: 6px; }
+  #goalRows h3 { margin: 10px 0 2px; font-size: 15px; }
+  #goalRows span { color: #b38600; white-space: nowrap; }
+  #goalCard span { font-size: 13px; font-weight: 800; color: var(--paper); text-shadow: 0 2px 0 var(--ink); }
+  #goalCard .bar { width: 170px; height: 12px; }
+  #goalFill { height: 100%; width: 0; background: var(--coin); transition: width 0.3s; }
+  #combo { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 140px); left: 0; right: 0; text-align: center; font-size: 30px; font-weight: 800; color: var(--coin); text-shadow: 0 3px 0 var(--ink), 0 0 6px var(--ink); pointer-events: none; }
+  #badge { position: absolute; top: -10px; right: -8px; min-width: 22px; height: 22px; box-sizing: border-box; border-radius: 999px; background: #ff4d6d; border: 3px solid var(--ink); color: var(--paper); font-size: 13px; line-height: 16px; text-align: center; padding: 0 4px; }
+  #start { position: fixed; inset: 0; display: grid; place-items: center; align-content: center; gap: 18px; background: linear-gradient(transparent 30%, var(--shade)); padding: 0 16px; text-align: center; }
+  #start h1 { font-size: 64px; }
+  #start h1 b { display: block; white-space: nowrap; font-weight: inherit; }
+  #start h1 span { display: inline-block; }
+  /* The opening shows only the world and the logo, no game HUD. */
+  body:has(#start:not([hidden])) > :not(#game, #start, #boot, script) { visibility: hidden; }
+  #start .bolt { font-size: 56px; -webkit-text-stroke: 0; }
+  #start .later { opacity: 0; transition: opacity 0.4s; }
+  #start.ready .later { opacity: 1; }
+  #start.ready #startBtn { animation: pulse 0.9s ease-in-out infinite alternate; }
+  @keyframes pulse { to { transform: scale(1.08); } }
+  #start h1 { margin: 0; font-size: 52px; line-height: 1; color: var(--paper); text-shadow: 0 4px 0 var(--ink), 0 0 2px var(--ink); -webkit-text-stroke: 2px var(--ink); }
+  #start p { margin: 0; max-width: 28ch; font-size: 18px; font-weight: 600; color: var(--paper); text-shadow: 0 2px 0 var(--ink); }
+  #startBtn { font-size: 24px; padding: 10px 36px; }
+  /* Ad and shop card sits above every other card; the web build shows a test card where the app plays a real ad. */
+  #adCard { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 8; }
+  #adCard .sheet { width: min(320px, 100%); text-align: center; box-shadow: 0 6px 0 var(--ink); }
+  #adCard p { margin: 0; font-weight: 600; }
+  #adNote { color: var(--muted); }
+  #padAd { position: fixed; left: 0; right: 0; margin: auto; width: max-content; bottom: calc(env(safe-area-inset-bottom, 0px) + 160px); background: #4dabff; color: var(--paper); font-size: 17px; }
+  #managerRows button.ad { background: #4dabff; color: var(--paper); }
+  #ticketAd { pointer-events: auto; margin-top: 8px; background: #4dabff; color: var(--paper); font-size: 15px; }
+  #feedback { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 7; }
+  #stars { display: flex; justify-content: center; gap: 6px; }
+  #stars button { font-size: 30px; padding: 0 6px; background: none; border: 0; box-shadow: none; filter: grayscale(1); opacity: 0.45; }
+  #stars button.on { filter: none; opacity: 1; }
+  #feedbackText { font: 600 16px var(--font); border: 3px solid var(--ink); border-radius: 14px; padding: 8px 10px; resize: none; }
+  #feedbackNote { color: var(--muted); text-align: center; min-height: 1em; }
+  #doneFeedback { width: 100%; margin-top: 8px; font-size: 15px; }
+  #settings { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; }
+  /* The settings list grew; on short screens it scrolls inside the card instead of running off the screen. */
+  #settings > .sheet { max-height: calc(100vh - 32px); overflow-y: auto; }
+  /* Compact so it stays clear of the centered joystick even on 360 px wide phones. */
+  #upgBtn { position: fixed; right: max(12px, env(safe-area-inset-right, 0px)); bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); font-size: 15px; padding: 6px 10px; }
+  button { font: 800 18px var(--font); color: var(--ink); background: var(--volt); border: 3px solid var(--ink); border-radius: 14px; padding: 6px 18px; box-shadow: 0 4px 0 var(--ink); cursor: pointer; }
+  button:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+  button:disabled { background: #dfe6ee; color: var(--muted); }
+  button:focus-visible { outline: 3px solid var(--coin); outline-offset: 2px; }
+  #done { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; }
+  #done h2 { text-align: center; font-size: 30px; color: var(--ink); }
+  .next { margin: 0; text-align: center; font-weight: 800; color: var(--muted); }
+  .stats { margin: 0; display: grid; gap: 6px; }
+  .stats div { display: flex; justify-content: space-between; padding: 6px 0; border-top: 2px dashed #d5deea; font-size: 18px; }
+  .stats dt { color: var(--muted); }
+  .stats dd { margin: 0; font-weight: 800; font-variant-numeric: tabular-nums; }
+  /* Welcome-back card: what the station earned while away, collected by the player with a yellow amount. */
+  #welcome { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 6; }
+  #start .goal { font-weight: 800; color: var(--coin); text-shadow: 0 2px 0 var(--ink); }
+  #restore { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 6; }
+  #restore p { margin: 0; font-weight: 600; }
+  #restoreYes { background: var(--volt); }
+  #restoreNo { background: var(--paper); }
+  #welcome .sheet, #restore .sheet, #notice .sheet { width: min(340px, 100%); text-align: center; box-shadow: 0 6px 0 var(--ink); }
+  #notice { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; z-index: 5; }
+  #notice p { margin: 0; font-weight: 600; }
+  #noticeGo { background: var(--volt); }
+  #noticeLater { background: var(--paper); }
+  #welcomeAmount { font-size: 46px; font-weight: 800; color: #f2c230; -webkit-text-stroke: 1.5px #9a6a00; line-height: 1.1; }
+  #welcome small { color: var(--muted); font-weight: 600; }
+  #welcomeRows div { display: flex; justify-content: space-between; font-weight: 700; padding: 4px 2px; border-top: 2px dashed #d5deea; }
+  #welcomeRows b { color: #b38600; }
+  #welcomeDouble { background: #4dabff; color: var(--paper); }
+  .actions { display: flex; gap: 10px; }
+  .actions button { flex: 1; }
+  button.ghost { background: var(--paper); }
+  #panel { position: fixed; inset: 0; display: grid; place-items: end center; background: var(--shade); padding: 0 16px calc(env(safe-area-inset-bottom, 0px) + 16px); }
+  .sheet { box-sizing: border-box; width: min(420px, 100%); background: var(--paper); border: 3px solid var(--ink); border-radius: 20px; padding: 12px 16px 16px; display: grid; gap: 10px; }
+  .sheet header { display: flex; justify-content: space-between; align-items: center; }
+  .sheet h2 { margin: 0; font-size: 22px; }
+  #close { background: var(--paper); padding: 2px 12px; }
+  .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 0; border-top: 2px dashed #d5deea; }
+  /* The upgrade list scrolls inside the sheet so its header and the buyable rows on top always stay on screen. */
+  #panel .sheet { max-height: calc(100vh - 96px); grid-template-rows: auto 1fr; }
+  #rows { overflow-y: auto; }
+  #rows .row.ready { background: #fff3c4; border-radius: 10px; padding: 8px; }
+  #rows .row.maxed { opacity: 0.5; }
+  .row b { display: block; font-size: 18px; line-height: 1.1; }
+  .row small { color: var(--muted); font-size: 14px; }
+  .row button { min-width: 92px; font-variant-numeric: tabular-nums; }
+  #toast { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 196px); left: 16px; right: 16px; margin: auto; max-width: 360px; text-align: center; background: var(--coin); border: 3px solid var(--ink); border-radius: 14px; padding: 8px 12px; font-weight: 800; }
+  #hint.drag::before { content: '👆'; display: block; font-size: 46px; animation: swipe 1.6s ease-in-out infinite; }
+  @keyframes swipe { 0%, 100% { transform: translateX(-40px) rotate(-12deg); } 50% { transform: translateX(40px) rotate(12deg); } }
+  #hint { position: fixed; left: 0; right: 0; bottom: calc(env(safe-area-inset-bottom, 0px) + 160px); text-align: center; font-size: 22px; font-weight: 800; color: var(--paper); text-shadow: 0 2px 0 var(--ink), 0 0 6px var(--ink); pointer-events: none; }
+  #joy { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 24px); transform: translateX(-50%); border-radius: 50%; background: rgba(255, 255, 255, 0.35); border: 3px solid rgba(20, 35, 58, 0.4); pointer-events: none; display: grid; place-items: center; opacity: 0.1; transition: opacity 0.15s; }
+  #joy.active { opacity: 0.45; }
+  #joy span { width: 44%; height: 44%; border-radius: 50%; background: var(--paper); border: 3px solid var(--ink); }
+  #cash.debt { color: #ff4d6d; }
+  #jam { position: fixed; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 6px #ff4d6d; animation: jam 0.8s ease-in-out infinite; }
+  @keyframes jam { 50% { box-shadow: inset 0 0 0 14px rgba(255, 77, 109, 0.5); } }
+  #siren { position: fixed; inset: 0; pointer-events: none; animation: siren 0.34s steps(1) infinite; }
+  @keyframes siren { 0% { box-shadow: inset 12px 0 18px -4px #ff2d55, inset -12px 0 18px -4px #1f4fd1; } 50% { box-shadow: inset 12px 0 18px -4px #1f4fd1, inset -12px 0 18px -4px #ff2d55; } }
+  #ticket { position: fixed; top: 34%; left: 0; right: 0; margin: auto; width: min(300px, 82vw); box-sizing: border-box; background: var(--paper); border: 4px solid var(--ink); border-radius: 18px; box-shadow: 0 6px 0 var(--ink); text-align: center; padding: 10px 14px 14px; transform: rotate(-4deg); pointer-events: none; }
+  #ticket::before { content: "🚔"; display: block; font-size: 40px; line-height: 1.1; }
+  #ticketTitle { font-size: 20px; font-weight: 800; letter-spacing: 0.08em; color: var(--paper); background: #ff2d55; border-radius: 8px; padding: 2px 8px; display: inline-block; }
+  #ticketAmount { font-size: 54px; font-weight: 800; line-height: 1.1; color: #ff2d55; text-shadow: 0 3px 0 var(--ink); -webkit-text-stroke: 1px var(--ink); }
+  #ticketNote { font-size: 14px; font-weight: 600; color: var(--muted); }
+  #ticket.warn #ticketTitle { background: #ffb800; color: var(--ink); }
+  #ticket.warn #ticketAmount { font-size: 30px; color: #ffb800; }
+  /* Sits in the gap between the settings button and the stage label, right next to the cash it explains. */
+  /* One small +$ / -$ chip rises off the bottom of the cash counter, so it never covers the lines below it. */
+  #deltas { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 44px); left: calc(max(16px, env(safe-area-inset-left, 0px)) + 48px); pointer-events: none; z-index: 4; }
+  .delta { display: block; font-size: 15px; line-height: 22px; font-weight: 800; background: var(--ink); border-radius: 999px; padding: 0 8px; }
+  /* Top right under the station chips: the bottom corners belong to the joystick, the van map, Books and the action buttons. */
+  #chainBox { position: fixed; right: max(12px, env(safe-area-inset-right, 0px)); top: calc(env(safe-area-inset-top, 0px) + 130px); z-index: 4; font-size: 15px; font-weight: 800; color: #fff; background: var(--ink); border: 2px solid #5dff7a; border-radius: 999px; padding: 6px 12px; }
+  .delta.gain { color: #5dff7a; }
+  .delta.loss { color: #ff4d6d; }
+  .coin { position: fixed; left: 0; top: 0; width: 26px; height: 15px; margin: -8px -13px; border-radius: 3px; background: linear-gradient(90deg, #f2c230 0 40%, #fffaf0 40% 58%, #f2c230 58%); border: 2px solid #9a6a00; pointer-events: none; z-index: 5; }
+  #boosts { position: fixed; left: max(16px, env(safe-area-inset-left, 0px)); max-width: calc(100vw - 190px); top: calc(env(safe-area-inset-top, 0px) + 128px); text-align: left; font-size: 15px; font-weight: 800; color: var(--coin); text-shadow: 0 2px 0 var(--ink); pointer-events: none; }
+  /* Queue meter: how many cars wait on the road, out of the count that jams it. */
+  #queue { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 88px); right: max(16px, env(safe-area-inset-right, 0px)); display: grid; justify-items: end; gap: 3px; background: var(--paper); border: 3px solid var(--ink); border-radius: 12px; padding: 4px 8px; font-size: 13px; font-weight: 800; pointer-events: none; }
+  #queue .cars { display: flex; gap: 2px; }
+  #queue .cars i { width: 12px; height: 8px; border-radius: 3px; background: var(--muted); opacity: 0.35; }
+  #queue .cars i.on { background: var(--coin); opacity: 1; }
+  #queue.warn .cars i.on { background: #ff8a3d; }
+  #queue.jam { background: #ff4d6d; color: var(--paper); }
+  #queue.hold { background: #5ee1a0; }
+  #queue.jam .cars i.on { background: var(--paper); }
+  #booksBtn { position: fixed; left: max(12px, env(safe-area-inset-left, 0px)); bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); font-size: 15px; padding: 6px 10px; background: var(--coin); }
+  #managerPanel { position: fixed; left: 0; right: 0; bottom: calc(env(safe-area-inset-bottom, 0px) + 150px); display: grid; place-items: center; padding: 0 16px; pointer-events: none; }
+  #managerPanel .sheet { pointer-events: auto; }
+  #managerPanel small { display: block; }
+  #managerPanel .gain { color: #1f9e4b; } #managerPanel .loss { color: #e0284f; }
+  #books { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shade); padding: 0 16px; }
+  #books .sheet { max-height: 80vh; overflow: auto; }
+  #books h3 { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+  #books .row { padding: 4px 0; font-size: 16px; }
+  #books .net { font-size: 20px; border-top: 3px solid var(--ink); }
+  #books .gain { color: #1f9e4b; } #books .loss { color: #e0284f; }
+  #divertBtn { position: fixed; right: max(12px, env(safe-area-inset-right, 0px)); bottom: calc(env(safe-area-inset-bottom, 0px) + 72px); font-size: 15px; padding: 6px 10px; background: #4dabff; }
+  #upgBtn.nudge { animation: nudge 0.8s ease-in-out infinite; background: var(--coin); }
+  @keyframes nudge { 50% { transform: scale(1.12); } }
+  /* Landscape phones: banners, hint and toasts sit in the free top-centre column, clear of the joystick and side buttons; sheets scroll. */
+  @media (orientation: landscape) and (max-height: 500px) {
+    #rush, #rivalBar { top: calc(env(safe-area-inset-top, 0px) + 12px); }
+    #combo { top: 64px; font-size: 24px; }
+    #padAd { left: auto; right: max(12px, env(safe-area-inset-right, 0px)); top: 45%; bottom: auto; }
+    #hint { top: calc(env(safe-area-inset-top, 0px) + 100px); bottom: auto; margin: auto; width: max-content; max-width: 40vw; font-size: 18px; }
+    #toast { top: calc(env(safe-area-inset-top, 0px) + 134px); bottom: auto; max-width: 300px; padding: 4px 10px; font-size: 14px; }
+    #boosts { max-width: calc(50vw - 190px); }
+    #managerPanel { bottom: calc(env(safe-area-inset-bottom, 0px) + 64px); }
+    #stageUp { top: 8%; }
+    #stageUpIcon { font-size: 40px; }
+    #ticket { top: 16%; }
+    .sheet { max-height: calc(100vh - 24px); overflow-y: auto; }
+  }
+  /* Tablets: HUD pieces and the cards inside full-screen overlays grow so buttons and text keep a phone-like size in the hand.
+     The overlays themselves and the game canvas keep the screen size, so cards stay centred. */
+  @media (min-width: 700px) and (min-height: 700px) {
+    body > :not(#game, #panel, #settings, #done, #goals, #chain, #mapPanel, #books, #welcome, #notice, #restore, #start, #travel, #feedback),
+    #panel > .sheet, #settings > .sheet, #done > .sheet, #goals > .sheet, #chain > .sheet, #mapPanel > .sheet, #books > .sheet,
+    #welcome > .sheet, #notice > .sheet, #restore > .sheet, #feedback > .sheet, #start > *, #travel > * { zoom: 1.3; }
+    #panel { place-items: center; }
+    #settings > .sheet { max-height: calc((100vh - 32px) / 1.3); }
+  }
+  @media (prefers-reduced-motion: reduce) { button:active { transform: none; } #upgBtn.nudge, #jam, #siren { animation: none; } }
+  /* Loading intro in the game's daytime greens: a car rolls up and plugs in, energy runs down the cable and the battery fills with
+     the real download; at full charge a glint sweeps the car, READY! stamps in and a circle closes onto the world. */
+  #boot { position: fixed; inset: 0; z-index: 20; overflow: hidden; display: grid; place-items: center; align-content: center; gap: 16px; padding: 0 16px; text-align: center; color: var(--paper); pointer-events: none; background: linear-gradient(#bfe8ff, #e3f6ff); clip-path: circle(150% at 50% 45%); transition: clip-path 0.6s cubic-bezier(.6, 0, .4, 1); }
+  #boot.gone { clip-path: circle(0% at 50% 45%); }
+  #boot .clouds { position: absolute; inset: 0 0 45% 0; background-image: radial-gradient(60px 22px at 18% 22%, #fff, transparent), radial-gradient(80px 26px at 72% 14%, #fff, transparent), radial-gradient(50px 18px at 56% 32%, #fffc, transparent); animation: drift 14s linear infinite alternate; }
+  #boot svg { position: relative; width: min(400px, 96vw); overflow: visible; }
+  #boot .sky { animation: drift 9s linear infinite; }
+  #boot .dash { animation: road 0.5s linear infinite; }
+  #boot.full .dash { animation-play-state: paused; }
+  #boot .car { animation: rollIn 0.9s cubic-bezier(.2, .9, .3, 1.1) both, bob 0.6s 0.9s ease-in-out infinite alternate; }
+  #boot .wheel { transform-box: fill-box; transform-origin: center; animation: spin 0.9s linear both; }
+  #boot .beam { opacity: 0.15; transform-box: fill-box; transform-origin: left center; }
+  #boot .glint { opacity: 0; transform: translateX(-120px) skewX(-20deg); }
+  #boot.full .glint { animation: glint 0.6s ease-out forwards; }
+  #boot .cable { stroke-dasharray: 140; stroke-dashoffset: 140; animation: plug 0.35s 0.9s ease-out forwards; }
+  #boot .flow { stroke-dasharray: 6 16; opacity: 0; animation: flow 0.5s 1.25s linear infinite, show 0.2s 1.25s forwards; }
+  #boot .screen { animation: glow 1s ease-in-out infinite alternate; }
+  #boot .spark { opacity: 0; transform-box: fill-box; transform-origin: center; animation: rise 1.6s ease-out infinite; }
+  #boot .spark:nth-of-type(2) { animation-delay: 0.5s; } #boot .spark:nth-of-type(3) { animation-delay: 1s; }
+  #bootBar { position: relative; width: min(280px, 76vw); height: 30px; border: 4px solid var(--ink); border-radius: 12px; background: #fff; box-shadow: 0 4px 0 var(--ink); }
+  #bootBar::after { content: ''; position: absolute; right: -11px; top: 7px; width: 7px; height: 10px; border-radius: 0 3px 3px 0; background: var(--ink); }
+  #bootFill { position: absolute; inset: 3px; border-radius: 7px; background: linear-gradient(90deg, #19c37d, #2fe39b 60%, #b8ffd9); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease-out; overflow: hidden; }
+  #bootFill::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, #fff8 50%, transparent 70%); animation: shine 1.2s linear infinite; }
+  #bootPct { position: relative; font-size: 24px; font-weight: 800; color: var(--coin); text-shadow: 0 3px 0 var(--ink); }
+  #bootTip { position: relative; min-height: 2.6em; max-width: 28ch; font-size: 16px; font-weight: 700; text-shadow: 0 2px 0 var(--ink); opacity: 0.92; transition: opacity 0.25s; }
+  #bootReady { position: absolute; top: 18%; font-size: 64px; font-weight: 800; color: var(--coin); -webkit-text-stroke: 3px var(--ink); text-shadow: 0 6px 0 var(--ink); transform: scale(0) rotate(-12deg); }
+  #boot.full #bootReady { animation: stamp 0.45s cubic-bezier(.3, 1.6, .5, 1) forwards; }
+  #boot.full #bootBar { animation: pulse 0.3s 2 alternate; }
+  #bootReady { text-shadow: 0 6px 0 var(--ink); }
+  @keyframes drift { to { transform: translateX(-60px); } }
+  @keyframes road { to { transform: translateX(-40px); } }
+  @keyframes rollIn { from { transform: translateX(-130vw); } }
+  @keyframes bob { to { transform: translateY(-1.5px); } }
+  @keyframes spin { from { transform: rotate(-900deg); } }
+  @keyframes glint { 20% { opacity: 0.9; } to { opacity: 0; transform: translateX(160px) skewX(-20deg); } }
+  @keyframes plug { to { stroke-dashoffset: 0; } }
+  @keyframes flow { to { stroke-dashoffset: -22; } }
+  @keyframes show { to { opacity: 1; } }
+  @keyframes glow { to { fill: #b8ffd9; } }
+  @keyframes rise { 0% { opacity: 0; transform: translateY(0) scale(0.6); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(-34px) scale(1.2); } }
+  @keyframes shine { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+  @keyframes stamp { to { transform: scale(1) rotate(-6deg); } }
+  @keyframes pulse { to { box-shadow: 0 0 40px #2fe39b; transform: scale(1.06); } }
+</style>
+
+<div id="boot">
+  <div class="clouds"></div>
+  <svg viewBox="0 0 340 214" aria-hidden="true">
+    <!-- Depth: far skyline paler, near skyline darker, the charger set back on the sidewalk and smaller, the car in front casting a shadow. -->
+    <g class="sky" fill="#cfe3f2" transform="translate(30 -16) scale(0.9)"><g id="farSky"><path d="M-20 120 V70 h26 v-24 h20 v24 h16 V52 h30 v68 Z M100 120 V62 h22 v-18 h28 v76 Z M168 120 V48 h34 v72 Z M214 120 V66 h22 v-14 h24 v68 Z M272 120 V58 h30 v62 Z M312 120 V74 h30 v46 Z M352 120 V60 h28 v60 Z"/></g><use href="#farSky" x="-400"/><use href="#farSky" x="400"/></g>
+    <g class="sky">
+      <g id="nearSky" fill="#a9c6df">
+        <path d="M-20 120 V70 h26 v-24 h20 v24 h16 V52 h30 v68 Z M100 120 V62 h22 v-18 h28 v76 Z M168 120 V48 h34 v72 Z M214 120 V66 h22 v-14 h24 v68 Z M272 120 V58 h30 v62 Z M312 120 V74 h30 v46 Z M352 120 V60 h28 v60 Z"/>
+        <g fill="#e9f5ff"><rect x="38" y="60" width="5" height="6"/><rect x="58" y="76" width="5" height="6"/><rect x="128" y="54" width="5" height="6"/><rect x="180" y="62" width="5" height="6"/><rect x="190" y="84" width="5" height="6"/><rect x="246" y="64" width="5" height="6"/><rect x="284" y="72" width="5" height="6"/><rect x="364" y="70" width="5" height="6"/></g>
+      </g>
+      <use href="#nearSky" x="-400"/><use href="#nearSky" x="400"/>
+    </g>
+    <path d="M-2000 104 H2340 V112 H-2000 Z" fill="#6cc070"/>
+    <path d="M-2000 112 H2340 V124 H-2000 Z" fill="#e2dccd"/>
+    <path d="M-2000 124 H2340 V130 H-2000 Z" fill="#b9b1a0"/>
+    <rect x="-2000" y="130" width="4340" height="84" fill="#555b6b"/>
+    <!-- The lawn runs on below the road to the bottom of any screen. -->
+    <rect x="-2000" y="214" width="4340" height="3000" fill="#6cc070"/>
+    <rect x="-2000" y="136" width="4340" height="2" fill="#ffffff22"/>
+    <line class="dash" x1="-2000" y1="188" x2="2340" y2="188" stroke="#ffd34d" stroke-width="4" stroke-linecap="round" stroke-dasharray="20 20"/>
+    <ellipse cx="219" cy="123" rx="22" ry="4" fill="#0004"/>
+    <g transform="translate(-26 -6) scale(0.85)">
+      <rect x="270" y="58" width="40" height="94" rx="9" fill="#2fe39b" stroke="#14233a" stroke-width="5"/>
+      <rect class="screen" x="279" y="70" width="22" height="24" rx="4" fill="#5af0b4" stroke="#14233a" stroke-width="3"/>
+      <path d="M292 74 l-7 10 h5 l-3 8 l9 -12 h-5 z" fill="#14233a"/>
+    </g>
+    <path class="cable" d="M222 98 C 244 110, 236 132, 214 126" fill="none" stroke="#14233a" stroke-width="6" stroke-linecap="round"/>
+    <path class="flow" d="M222 98 C 244 110, 236 132, 214 126" fill="none" stroke="#2fe39b" stroke-width="2.5" stroke-linecap="round"/>
+    <g transform="translate(-8 22)">
+    <g class="car">
+      <ellipse cx="141" cy="152" rx="106" ry="8" fill="#0005"/>
+      <path class="beam" d="M232 112 L330 96 L330 132 Z" fill="#fff6c2"/>
+      <!-- Body drawn long hood to the right, so the headlight sits at the front as it drives in. -->
+      <g transform="translate(282 0) scale(-1 1)">
+        <path d="M40 132 L48 104 Q54 92 72 90 L114 88 Q130 68 152 68 L188 68 Q206 68 218 92 L232 98 Q242 102 242 114 L242 132 Z" fill="#ffd34d" stroke="#14233a" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M122 90 Q134 76 152 76 L166 76 L166 90 Z M174 76 L188 76 Q200 76 208 90 L174 90 Z" fill="#bfe6ff" stroke="#14233a" stroke-width="4" stroke-linejoin="round"/>
+        <clipPath id="carBody"><path d="M40 132 L48 104 Q54 92 72 90 L114 88 Q130 68 152 68 L188 68 Q206 68 218 92 L232 98 Q242 102 242 114 L242 132 Z"/></clipPath>
+        <g clip-path="url(#carBody)"><rect class="glint" x="60" y="60" width="26" height="80" fill="#fff"/></g>
+      </g>
+      <rect x="232" y="104" width="10" height="8" rx="3" fill="#fff6c2" stroke="#14233a" stroke-width="3"/>
+      <path d="M140 106 l-6 9 h5 l-3 7 l9 -11 h-5 z" fill="#14233a"/>
+      <circle class="wheel" cx="84" cy="134" r="17" fill="#14233a"/><circle cx="84" cy="134" r="6" fill="#fff"/>
+      <circle class="wheel" cx="200" cy="134" r="17" fill="#14233a"/><circle cx="200" cy="134" r="6" fill="#fff"/>
+      <path class="spark" d="M150 48 l-7 12 h6 l-4 10 l11 -14 h-6 z" fill="#ffd34d"/>
+      <path class="spark" d="M120 56 l-5 9 h4 l-3 7 l8 -10 h-4 z" fill="#2fe39b"/>
+      <path class="spark" d="M180 54 l-5 9 h4 l-3 7 l8 -10 h-4 z" fill="#fff"/>
+    </g>
+    </g>
+  </svg>
+  <div id="bootBar"><div id="bootFill"></div></div>
+  <div id="bootPct">Charging 0%</div>
+  <div id="bootTip"></div>
+  <div id="bootReady">READY!</div>
+</div>
+<script>
+  // Real load progress from models.js and game.js; done(cb) plays the full charge, opens the circle and hands over to the opening.
+  (() => {
+    const el = document.getElementById('boot'), fill = document.getElementById('bootFill'), pct = document.getElementById('bootPct'), tip = document.getElementById('bootTip');
+    const tips = ['⚡ Plug in EVs and serve food while they charge', '👑 VIPs pay big, serve them first', '⛈️ Storms bring a rush of drivers', '🏁 Beat the rival station down the road', '🏗️ Build 5 stations across the map'];
+    let shown = 0, k = Math.floor(Math.random() * tips.length);
+    const nextTip = () => { tip.style.opacity = 0; setTimeout(() => { tip.textContent = tips[k++ % tips.length]; tip.style.opacity = 0.92; }, 250); };
+    nextTip();
+    const timer = setInterval(nextTip, 2600), born = performance.now();
+    const set = (p) => { shown = Math.max(shown, Math.min(p, 1)); fill.style.transform = `scaleX(${shown})`; pct.textContent = shown < 1 ? `Charging ${Math.round(shown * 100)}%` : '⚡ Fully charged!'; };
+    window.boot = { progress: set, done(cb) {
+      set(1);
+      el.classList.add('full');
+      clearInterval(timer);
+      navigator.vibrate?.(40);
+      // The car always gets its moment, however fast the load was; then the circle closes onto the world.
+      setTimeout(() => { el.classList.add('gone'); cb(); setTimeout(() => el.remove(), 650); }, Math.max(1800 - (performance.now() - born), 0) + 800);
+    } };
+  })();
+</script>
+<div id="game"></div>
+<div class="top">
+  <div class="left">
+    <div id="cash">$0</div>
+    <button id="settingsBtn" aria-label="Settings"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z M19.4 13a7.6 7.6 0 0 0 0-2l2-1.6-2-3.4-2.4 1a7.4 7.4 0 0 0-1.7-1L15 3.5h-4l-.4 2.5a7.4 7.4 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7.6 7.6 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7.4 7.4 0 0 0 1.7 1l.4 2.5h4l.4-2.5a7.4 7.4 0 0 0 1.7-1l2.4 1 2-3.4Z" fill="none" stroke="#14233a" stroke-width="2" stroke-linejoin="round"/></svg></button>
+  </div>
+  <div class="station"><span><i id="stage"></i> <b id="rating">⭐5.0</b></span><div class="bar" id="stageBar"><div id="progress"></div><b id="progressText"></b></div><small id="city"></small><b id="cityHand" hidden>👉</b></div>
+</div>
+<div id="mission" hidden></div>
+<div id="mapWrap"><canvas id="map" hidden aria-label="Mobile charging map, tap to open"></canvas><span id="mapBadge" hidden>0</span></div>
+<div id="goalCard" hidden><span id="goalName"></span><div class="bar"><div id="goalFill"></div></div></div>
+<div id="combo" hidden></div>
+<div id="hint" data-start="Drag anywhere to move">Drag anywhere to move</div>
+<div id="jam" hidden></div>
+<div id="siren" hidden></div>
+<div id="ticket" hidden><div id="ticketTitle"></div><div id="ticketAmount"></div><div id="ticketNote"></div><button id="ticketAd" hidden>▶ Cancel the fine</button></div>
+<div id="boosts" hidden></div>
+<div id="queue" hidden><span id="queueText"></span><div class="cars"></div></div>
+<div id="stageUp" hidden><div id="stageUpTitle"></div><div id="stageUpIcon"></div><div id="stageUpName"></div><small id="stageUpNote"></small></div>
+<div id="deltas"></div><button id="chainBox" hidden></button>
+<button id="booksBtn" hidden aria-label="Open the books">📊 Books</button>
+<button id="divertBtn" hidden aria-label="Send vans to the queue">🚐 Vans</button>
+<button id="upgBtn" hidden>Upgrades<span id="badge" hidden>0</span></button>
+<div id="toast" hidden></div>
+<div id="joy"><span></span></div>
+<div id="panel" hidden>
+  <div class="sheet">
+    <header><h2>Upgrades</h2><button id="close">Close</button></header>
+    <div id="rows"></div>
+  </div>
+</div>
+
+<div id="goals" hidden>
+  <div class="sheet">
+    <header><h2>📋 Station goals</h2><button id="goalsClose">✕</button></header>
+    <div id="goalRows"></div>
+  </div>
+</div>
+<div id="chain" hidden>
+  <div class="sheet">
+    <header><h2>🗺️ Station Chain</h2><button id="chainClose">✕</button></header>
+    <small id="chainTotal"></small>
+    <div id="chainRows"></div>
+  </div>
+</div>
+<div id="travel" hidden></div>
+<div id="rivalBar" hidden></div>
+<div id="adWarn" hidden></div>
+<div id="flash" hidden></div>
+<div id="rush" hidden><span id="rushText"></span> <button id="rushDouble">▶ ×2</button></div>
+<div id="restore" hidden>
+  <div class="sheet">
+    <h2>💾 Saved progress found</h2>
+    <p id="restoreText"></p>
+    <div class="actions"><button id="restoreNo">Keep this one</button><button id="restoreYes">Restore</button></div>
+  </div>
+</div>
+<div id="notice" hidden>
+  <div class="sheet">
+    <h2>🛣️ Your shops grew!</h2>
+    <p>Your tire shop, repair garage and tow truck moved to your new <b>Highway Rest Stop</b>. It is ready with chargers, diner and staff, and your town keeps earning.</p>
+    <div class="actions"><button id="noticeLater">Later</button><button id="noticeGo">🗺️ Go to Highway</button></div>
+  </div>
+</div>
+<div id="welcome" hidden>
+  <div class="sheet">
+    <h2>👋 Welcome back!</h2>
+    <small id="welcomeAway"></small>
+    <div id="welcomeAmount"></div>
+    <div id="welcomeRows"></div>
+    <div class="actions"><button id="welcomeCollect">Collect</button><button id="welcomeDouble">▶ ×2</button></div>
+  </div>
+</div>
+<div id="done" hidden>
+  <div class="sheet">
+    <h2 id="doneTitle">Stage 1 Complete!</h2>
+    <p class="next" id="doneNext">Next: Stage 2 ☕ Coffee Drive-Thru. Build it with your earnings.</p>
+    <dl class="stats">
+      <div><dt>Time</dt><dd id="doneTime">0:00</dd></div>
+      <div><dt>Cars charged</dt><dd id="doneCars">0</dd></div>
+      <div><dt>Earned</dt><dd id="doneEarned">$0</dd></div>
+    </dl>
+    <button id="nextStation" hidden></button>
+    <div class="actions"><button id="openChain" hidden>🗺️ Stations</button><button id="keepPlaying">Continue</button></div>
+    <button id="doneFeedback" class="ghost">💬 How was it? Tell us</button>
+  </div>
+</div>
+
+<div id="mapPanel" hidden>
+  <div class="sheet">
+    <header><h2>Mobile Charging</h2><button id="mapClose" class="ghost">Close</button></header>
+    <canvas id="mapBig" aria-label="Tap a stranded EV to send a van"></canvas>
+    <small class="mapNote">Tap a red dot to send a van. Fee grows with distance, every km costs fuel and time.</small>
+  </div>
+</div>
+
+<div id="managerPanel" hidden>
+  <div class="sheet">
+    <header><h2>👔 Manager</h2><button id="managerClose" class="ghost">Close</button></header>
+    <div id="managerRows"></div>
+  </div>
+</div>
+
+<div id="books" hidden>
+  <div class="sheet">
+    <header><h2>📊 Books</h2><button id="booksClose" class="ghost">Close</button></header>
+    <div id="booksBody"></div>
+  </div>
+</div>
+
+<button id="padAd" hidden></button>
+<div id="adCard" hidden>
+  <div class="sheet">
+    <h2 id="adTitle"></h2>
+    <p id="adBody"></p>
+    <small id="adNote"></small>
+    <div class="actions"><button id="adNo" class="ghost"></button><button id="adYes"></button></div>
+  </div>
+</div>
+<div id="feedback" hidden>
+  <div class="sheet">
+    <header><h2>💬 Feedback</h2><button id="feedbackClose" class="ghost">Close</button></header>
+    <div id="stars" role="radiogroup" aria-label="Rating"></div>
+    <textarea id="feedbackText" rows="4" placeholder="What did you like? What was confusing?"></textarea>
+    <small id="feedbackNote"></small>
+    <button id="feedbackSend" disabled>Send</button>
+  </div>
+</div>
+<div id="settings" hidden>
+  <div class="sheet">
+    <header><h2>Settings</h2><button id="settingsClose" class="ghost">Close</button></header>
+    <div class="row"><b>Sound</b><button id="soundBtn">On</button></div>
+    <div class="row"><b>Vibration</b><button id="vibrateBtn">On</button></div>
+    <div class="row"><b>Resolution</b><button id="qualityBtn">High</button></div>
+    <div class="row"><b>No Ads</b><button id="shopNoAds"></button></div>
+    <div class="row" id="shopStarterRow"><b>🎁 Starter Pack</b><button id="shopStarter"></button></div>
+    <div class="row" id="privacyRow" hidden><b>Ad privacy</b><button id="privacyBtn">Choices</button></div>
+    <div class="row"><b>Feedback</b><button id="feedbackBtn">💬 Tell us</button></div>
+    <div class="row"><b>Car album</b><span id="albumText"></span></div>
+    <div class="row"><b>Outfit</b><button id="outfitBtn">Change</button></div>
+    <div class="row"><b>Share</b><button id="shareBtn">📣 Share</button></div>
+    <div class="row"><b>Save code</b><span><button id="codeCopy">Copy</button> <button id="codeLoad">Load</button></span></div>
+    <textarea id="codeText" hidden rows="3" placeholder="Paste a save code, then tap Load"></textarea>
+    <div class="row"><b>Stuck?</b><button id="unstuckBtn">Unstuck</button></div>
+    <div class="row"><b>Progress</b><button id="resetBtn" class="ghost">Reset</button></div>
+    <!-- Prototype only: test money for playtesters; remove before the publisher build. -->
+    <div class="row"><b>🧪 Test money</b><button id="testCash">+$1,000,000</button></div>
+    <div class="row"><b>🧪 Test speed</b><button id="testSpeed">×1</button></div>
+  </div>
+</div>
+
+<div id="start" hidden>
+  <h1 id="logo"></h1>
+  <p class="later">Plug in EVs and feed hungry drivers while they charge.</p>
+  <p class="goal later">🏆 Goal: build the #1 EV charging chain. Earn a ⭐ at every station!</p>
+  <button id="startBtn" class="later">Tap to Play</button>
+</div>
+
+<script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module" src="./game.js"></script>
