@@ -23,6 +23,12 @@
     },
     "android": {
       "package": "com.chargeready.app"
+    },
+    "owner": "santepeli",
+    "extra": {
+      "eas": {
+        "projectId": "df2e7607-1540-4d18-bfee-8b6a62b595e9"
+      }
     }
   }
 }
